@@ -1,0 +1,14 @@
+{
+  "name": "zym-knowledge-mcp",
+  "version": "1.0.0",
+  "description": "MCP Server for ZYM personal knowledge base",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node test.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0"
+  }
+}
