@@ -11,9 +11,10 @@ Central index of all wiki pages in the knowledge base.
 ## Pages
 
 - [[agent-system-architecture]] — Agent System Architecture
+- [[llm-pretrain-data-engineering]] — LLM 预训练数据工程
 
 ## Statistics
 
-- Total pages: 1
-- Total raw sources: 1
+- Total pages: 2
+- Total raw sources: 2
 - Last ingest: 2026-05-20
