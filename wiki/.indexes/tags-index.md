@@ -8,6 +8,7 @@ last_updated: 2026-05-20
 
 ## agent
 - [[agent-system-architecture]]
+- [[forward-deployed-engineer]]
 
 ## architecture
 - [[agent-system-architecture]]
@@ -18,9 +19,24 @@ last_updated: 2026-05-20
 ## deep-learning
 - [[llm-pretrain-data-engineering]]
 
+## deployment
+- [[forward-deployed-engineer]]
+
+## enterprise-ai
+- [[forward-deployed-engineer]]
+
+## fde
+- [[forward-deployed-engineer]]
+
 ## llm
 - [[agent-system-architecture]]
 - [[llm-pretrain-data-engineering]]
+
+## palantir
+- [[forward-deployed-engineer]]
+
+## pmf
+- [[forward-deployed-engineer]]
 
 ## pretraining
 - [[llm-pretrain-data-engineering]]
