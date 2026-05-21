@@ -9,9 +9,22 @@ last_updated: 2026-05-20
 ## agent
 - [[agent-system-architecture]]
 - [[forward-deployed-engineer]]
+- [[harness-as-moat]]
 
 ## architecture
 - [[agent-system-architecture]]
+
+## competitive-moat
+- [[harness-as-moat]]
+
+## cybernetics
+- [[harness-as-moat]]
+
+## flywheel
+- [[harness-as-moat]]
+
+## harness
+- [[harness-as-moat]]
 
 ## data-engineering
 - [[llm-pretrain-data-engineering]]

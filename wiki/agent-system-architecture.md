@@ -96,4 +96,4 @@ Compaction is not owned by a single layer — it is a cross-cutting concern:
 
 ## Related
 
-_No related pages yet._
+- [[harness-as-moat]] — Harness 作为竞争壁垒的产业辩论与控制论视角
