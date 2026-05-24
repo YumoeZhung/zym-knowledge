@@ -57,5 +57,20 @@ last_updated: 2026-05-20
 ## scaling
 - [[llm-pretrain-data-engineering]]
 
+## ai-strategy
+- [[meta-ai-pivot-2026]]
+
+## big-tech
+- [[meta-ai-pivot-2026]]
+
+## layoff
+- [[meta-ai-pivot-2026]]
+
+## meta
+- [[meta-ai-pivot-2026]]
+
+## organizational-change
+- [[meta-ai-pivot-2026]]
+
 ## system-design
 - [[agent-system-architecture]]

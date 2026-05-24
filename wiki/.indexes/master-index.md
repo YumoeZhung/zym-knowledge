@@ -14,9 +14,10 @@ Central index of all wiki pages in the knowledge base.
 - [[forward-deployed-engineer]] — Forward Deployed Engineer (FDE)
 - [[harness-as-moat]] — Harness 壁垒之争：控制论视角
 - [[llm-pretrain-data-engineering]] — LLM 预训练数据工程
+- [[meta-ai-pivot-2026]] — Meta 2026 AI 全面转型：裁员8000人与千亿美元豪赌
 
 ## Statistics
 
-- Total pages: 4
-- Total raw sources: 4
-- Last ingest: 2026-05-21
+- Total pages: 5
+- Total raw sources: 5
+- Last ingest: 2026-05-24
