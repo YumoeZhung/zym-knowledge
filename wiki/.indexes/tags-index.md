@@ -8,8 +8,18 @@ last_updated: 2026-05-20
 
 ## agent
 - [[agent-system-architecture]]
+- [[anthropic-claude-code-practices]]
 - [[forward-deployed-engineer]]
 - [[harness-as-moat]]
+
+## ai-workflow
+- [[anthropic-claude-code-practices]]
+
+## anthropic
+- [[anthropic-claude-code-practices]]
+
+## claude-code
+- [[anthropic-claude-code-practices]]
 
 ## architecture
 - [[agent-system-architecture]]
@@ -31,6 +41,9 @@ last_updated: 2026-05-20
 
 ## deep-learning
 - [[llm-pretrain-data-engineering]]
+
+## developer-tools
+- [[anthropic-claude-code-practices]]
 
 ## deployment
 - [[forward-deployed-engineer]]
@@ -74,3 +87,6 @@ last_updated: 2026-05-20
 
 ## system-design
 - [[agent-system-architecture]]
+
+## verification
+- [[anthropic-claude-code-practices]]
