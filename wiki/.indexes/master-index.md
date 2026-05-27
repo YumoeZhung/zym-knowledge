@@ -12,6 +12,7 @@ Central index of all wiki pages in the knowledge base.
 
 - [[agent-system-architecture]] — Agent System Architecture
 - [[anthropic-claude-code-practices]] — Anthropic 内部 Claude Code 实践：三种高效协作方式
+- [[browser-harness]] — Browser Harness：592行代码的自愈式浏览器自动化
 - [[forward-deployed-engineer]] — Forward Deployed Engineer (FDE)
 - [[harness-as-moat]] — Harness 壁垒之争：控制论视角
 - [[llm-pretrain-data-engineering]] — LLM 预训练数据工程
@@ -19,6 +20,6 @@ Central index of all wiki pages in the knowledge base.
 
 ## Statistics
 
-- Total pages: 6
-- Total raw sources: 6
-- Last ingest: 2026-05-24
+- Total pages: 7
+- Total raw sources: 7
+- Last ingest: 2026-05-27

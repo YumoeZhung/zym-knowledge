@@ -9,8 +9,12 @@ last_updated: 2026-05-20
 ## agent
 - [[agent-system-architecture]]
 - [[anthropic-claude-code-practices]]
+- [[browser-harness]]
 - [[forward-deployed-engineer]]
 - [[harness-as-moat]]
+
+## browser-automation
+- [[browser-harness]]
 
 ## ai-workflow
 - [[anthropic-claude-code-practices]]
@@ -34,6 +38,7 @@ last_updated: 2026-05-20
 - [[harness-as-moat]]
 
 ## harness
+- [[browser-harness]]
 - [[harness-as-moat]]
 
 ## data-engineering
@@ -82,8 +87,14 @@ last_updated: 2026-05-20
 ## meta
 - [[meta-ai-pivot-2026]]
 
+## open-source
+- [[browser-harness]]
+
 ## organizational-change
 - [[meta-ai-pivot-2026]]
+
+## self-healing
+- [[browser-harness]]
 
 ## system-design
 - [[agent-system-architecture]]
