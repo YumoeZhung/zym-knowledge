@@ -10,6 +10,7 @@ last_updated: 2026-05-20
 - [[agent-system-architecture]]
 - [[anthropic-claude-code-practices]]
 - [[browser-harness]]
+- [[everything-claude-code]]
 - [[forward-deployed-engineer]]
 - [[harness-as-moat]]
 
@@ -24,6 +25,7 @@ last_updated: 2026-05-20
 
 ## claude-code
 - [[anthropic-claude-code-practices]]
+- [[everything-claude-code]]
 
 ## architecture
 - [[agent-system-architecture]]
@@ -39,6 +41,7 @@ last_updated: 2026-05-20
 
 ## harness
 - [[browser-harness]]
+- [[everything-claude-code]]
 - [[harness-as-moat]]
 
 ## data-engineering
@@ -49,6 +52,7 @@ last_updated: 2026-05-20
 
 ## developer-tools
 - [[anthropic-claude-code-practices]]
+- [[everything-claude-code]]
 
 ## deployment
 - [[forward-deployed-engineer]]
@@ -89,6 +93,7 @@ last_updated: 2026-05-20
 
 ## open-source
 - [[browser-harness]]
+- [[everything-claude-code]]
 
 ## organizational-change
 - [[meta-ai-pivot-2026]]
