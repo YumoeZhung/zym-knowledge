@@ -1,7 +1,7 @@
 ---
 title: Master Index
 created: 2026-05-19
-last_updated: 2026-05-20
+last_updated: 2026-05-29
 ---
 
 # Master Index
@@ -18,9 +18,10 @@ Central index of all wiki pages in the knowledge base.
 - [[harness-as-moat]] — Harness 壁垒之争：控制论视角
 - [[llm-pretrain-data-engineering]] — LLM 预训练数据工程
 - [[meta-ai-pivot-2026]] — Meta 2026 AI 全面转型：裁员8000人与千亿美元豪赌
+- [[rag-retrieval-2026-lessons]] — 2026 RAG 调研：从 Full-doc 争论转向 Query-aware Retrieval
 
 ## Statistics
 
-- Total pages: 8
-- Total raw sources: 8
-- Last ingest: 2026-05-28
+- Total pages: 9
+- Total raw sources: 9
+- Last ingest: 2026-05-29
