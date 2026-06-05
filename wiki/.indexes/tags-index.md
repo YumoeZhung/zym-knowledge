@@ -1,7 +1,7 @@
 ---
 title: Tags Index
 created: 2026-05-19
-last_updated: 2026-05-29
+last_updated: 2026-06-05
 ---
 
 # Tags Index
@@ -13,12 +13,14 @@ last_updated: 2026-05-29
 - [[everything-claude-code]]
 - [[forward-deployed-engineer]]
 - [[harness-as-moat]]
+- [[openspec-sdd]]
 
 ## ai-strategy
 - [[meta-ai-pivot-2026]]
 
 ## ai-workflow
 - [[anthropic-claude-code-practices]]
+- [[openspec-sdd]]
 
 ## anthropic
 - [[anthropic-claude-code-practices]]
@@ -54,6 +56,7 @@ last_updated: 2026-05-29
 ## developer-tools
 - [[anthropic-claude-code-practices]]
 - [[everything-claude-code]]
+- [[openspec-sdd]]
 
 ## enterprise-ai
 - [[forward-deployed-engineer]]
@@ -91,6 +94,7 @@ last_updated: 2026-05-29
 ## open-source
 - [[browser-harness]]
 - [[everything-claude-code]]
+- [[openspec-sdd]]
 
 ## organizational-change
 - [[meta-ai-pivot-2026]]
@@ -113,8 +117,14 @@ last_updated: 2026-05-29
 ## scaling
 - [[llm-pretrain-data-engineering]]
 
+## sdd
+- [[openspec-sdd]]
+
 ## self-healing
 - [[browser-harness]]
+
+## spec-driven-development
+- [[openspec-sdd]]
 
 ## system-design
 - [[agent-system-architecture]]

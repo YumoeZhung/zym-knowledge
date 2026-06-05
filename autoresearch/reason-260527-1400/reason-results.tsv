@@ -1,0 +1,5 @@
+round	timestamp	candidate_label	judge_verdict	convergence_count	description
+1	2026-05-27T14:00	Author-A(+8%)	rejected	0	宏观策略师看多：AI capex超级周期+业绩兑现期，预测+8-15%
+1	2026-05-27T14:00	Critic(-5%)	rejected	0	风控分析师看空：交易拥挤+产业资本减持+流动性收紧，预测-8-15%
+1	2026-05-27T14:00	Author-B(+3-5%)	accepted	1	量化合成者平衡视角：高位震荡偏上，期望收益+2%，预测+3-5%
+2	2026-05-27T14:00	Author-B(+3-5%)	final_verdict	1	盲审法官3:0一致裁定Label-Z(Author-B)胜出，收敛
