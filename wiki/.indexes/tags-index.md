@@ -1,7 +1,7 @@
 ---
 title: Tags Index
 created: 2026-05-19
-last_updated: 2026-06-05
+last_updated: 2026-06-16
 ---
 
 # Tags Index
@@ -10,6 +10,7 @@ last_updated: 2026-06-05
 - [[agent-system-architecture]]
 - [[anthropic-claude-code-practices]]
 - [[browser-harness]]
+- [[claw-swe-bench-harness-evaluation]]
 - [[everything-claude-code]]
 - [[forward-deployed-engineer]]
 - [[harness-as-moat]]
@@ -28,6 +29,9 @@ last_updated: 2026-06-05
 ## architecture
 - [[agent-system-architecture]]
 
+## benchmark
+- [[claw-swe-bench-harness-evaluation]]
+
 ## big-tech
 - [[meta-ai-pivot-2026]]
 
@@ -38,8 +42,14 @@ last_updated: 2026-06-05
 - [[anthropic-claude-code-practices]]
 - [[everything-claude-code]]
 
+## coding-agent
+- [[claw-swe-bench-harness-evaluation]]
+
 ## competitive-moat
 - [[harness-as-moat]]
+
+## cost-analysis
+- [[claw-swe-bench-harness-evaluation]]
 
 ## cybernetics
 - [[harness-as-moat]]
@@ -62,6 +72,7 @@ last_updated: 2026-06-05
 - [[forward-deployed-engineer]]
 
 ## evaluation
+- [[claw-swe-bench-harness-evaluation]]
 - [[rag-retrieval-2026-lessons]]
 
 ## fde
@@ -75,6 +86,7 @@ last_updated: 2026-06-05
 
 ## harness
 - [[browser-harness]]
+- [[claw-swe-bench-harness-evaluation]]
 - [[everything-claude-code]]
 - [[harness-as-moat]]
 
@@ -93,6 +105,7 @@ last_updated: 2026-06-05
 
 ## open-source
 - [[browser-harness]]
+- [[claw-swe-bench-harness-evaluation]]
 - [[everything-claude-code]]
 - [[openspec-sdd]]
 
