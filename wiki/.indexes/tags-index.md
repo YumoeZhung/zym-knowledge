@@ -1,7 +1,7 @@
 ---
 title: Tags Index
 created: 2026-05-19
-last_updated: 2026-06-16
+last_updated: 2026-06-17
 ---
 
 # Tags Index
@@ -16,6 +16,9 @@ last_updated: 2026-06-16
 - [[harness-as-moat]]
 - [[openspec-sdd]]
 
+## agent-harness
+- [[agent-harness-durable-compaction-runtime-boundary]]
+
 ## ai-strategy
 - [[meta-ai-pivot-2026]]
 
@@ -27,6 +30,7 @@ last_updated: 2026-06-16
 - [[anthropic-claude-code-practices]]
 
 ## architecture
+- [[agent-harness-durable-compaction-runtime-boundary]]
 - [[agent-system-architecture]]
 
 ## benchmark
@@ -62,6 +66,9 @@ last_updated: 2026-06-16
 
 ## deployment
 - [[forward-deployed-engineer]]
+
+## durable-compaction
+- [[agent-harness-durable-compaction-runtime-boundary]]
 
 ## developer-tools
 - [[anthropic-claude-code-practices]]
@@ -136,11 +143,17 @@ last_updated: 2026-06-16
 ## self-healing
 - [[browser-harness]]
 
+## session-runtime
+- [[agent-harness-durable-compaction-runtime-boundary]]
+
 ## spec-driven-development
 - [[openspec-sdd]]
 
 ## system-design
 - [[agent-system-architecture]]
+
+## task-engine
+- [[agent-harness-durable-compaction-runtime-boundary]]
 
 ## verification
 - [[anthropic-claude-code-practices]]
