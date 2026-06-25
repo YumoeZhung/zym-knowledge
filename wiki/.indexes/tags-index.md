@@ -1,7 +1,7 @@
 ---
 title: Tags Index
 created: 2026-05-19
-last_updated: 2026-06-17
+last_updated: 2026-06-25
 ---
 
 # Tags Index
@@ -10,6 +10,7 @@ last_updated: 2026-06-17
 - [[agent-system-architecture]]
 - [[anthropic-claude-code-practices]]
 - [[browser-harness]]
+- [[building-self-improving-agents]]
 - [[claw-swe-bench-harness-evaluation]]
 - [[everything-claude-code]]
 - [[forward-deployed-engineer]]
@@ -28,6 +29,7 @@ last_updated: 2026-06-17
 
 ## anthropic
 - [[anthropic-claude-code-practices]]
+- [[building-self-improving-agents]]
 
 ## architecture
 - [[agent-harness-durable-compaction-runtime-boundary]]
@@ -35,6 +37,9 @@ last_updated: 2026-06-17
 
 ## benchmark
 - [[claw-swe-bench-harness-evaluation]]
+
+## close-the-loop
+- [[building-self-improving-agents]]
 
 ## big-tech
 - [[meta-ai-pivot-2026]]
@@ -79,6 +84,7 @@ last_updated: 2026-06-17
 - [[forward-deployed-engineer]]
 
 ## evaluation
+- [[building-self-improving-agents]]
 - [[claw-swe-bench-harness-evaluation]]
 - [[rag-retrieval-2026-lessons]]
 
@@ -93,6 +99,7 @@ last_updated: 2026-06-17
 
 ## harness
 - [[browser-harness]]
+- [[building-self-improving-agents]]
 - [[claw-swe-bench-harness-evaluation]]
 - [[everything-claude-code]]
 - [[harness-as-moat]]
@@ -142,6 +149,9 @@ last_updated: 2026-06-17
 
 ## self-healing
 - [[browser-harness]]
+
+## self-improving
+- [[building-self-improving-agents]]
 
 ## session-runtime
 - [[agent-harness-durable-compaction-runtime-boundary]]
