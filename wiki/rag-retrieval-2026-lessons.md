@@ -1,7 +1,7 @@
 ---
 title: "2026 RAG 调研：从 Full-doc 争论转向 Query-aware Retrieval"
 created: 2026-05-29
-last_updated: 2026-05-29
+last_updated: 2026-07-06
 source: "Codex conversation and arXiv papers on 2026 RAG research"
 tags: [rag, retrieval, long-context, evaluation, happy-bee]
 ---
@@ -98,3 +98,4 @@ tags: [rag, retrieval, long-context, evaluation, happy-bee]
 
 - [[agent-system-architecture]] — Agent 分层与可观测边界
 - [[llm-pretrain-data-engineering]] — 数据质量和训练 / 检索效果之间的关系
+- [[route-aware-merged-retrieval-rerank]] — Merged retrieval 中保留 route diversity 信号的方法

@@ -1,7 +1,7 @@
 ---
 title: Master Index
 created: 2026-05-19
-last_updated: 2026-06-25
+last_updated: 2026-07-06
 ---
 
 # Master Index
@@ -23,9 +23,10 @@ Central index of all wiki pages in the knowledge base.
 - [[meta-ai-pivot-2026]] — Meta 2026 AI 全面转型：裁员8000人与千亿美元豪赌
 - [[openspec-sdd]] — SDD：Spec-Driven Development 与 OpenSpec 框架
 - [[rag-retrieval-2026-lessons]] — 2026 RAG 调研：从 Full-doc 争论转向 Query-aware Retrieval
+- [[route-aware-merged-retrieval-rerank]] — Route-aware Merged Retrieval Rerank
 
 ## Statistics
 
-- Total pages: 13
-- Total raw sources: 13
-- Last ingest: 2026-06-25
+- Total pages: 14
+- Total raw sources: 14
+- Last ingest: 2026-07-06

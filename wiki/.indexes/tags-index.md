@@ -1,7 +1,7 @@
 ---
 title: Tags Index
 created: 2026-05-19
-last_updated: 2026-06-25
+last_updated: 2026-07-06
 ---
 
 # Tags Index
@@ -16,6 +16,7 @@ last_updated: 2026-06-25
 - [[forward-deployed-engineer]]
 - [[harness-as-moat]]
 - [[openspec-sdd]]
+- [[route-aware-merged-retrieval-rerank]]
 
 ## agent-harness
 - [[agent-harness-durable-compaction-runtime-boundary]]
@@ -87,6 +88,7 @@ last_updated: 2026-06-25
 - [[building-self-improving-agents]]
 - [[claw-swe-bench-harness-evaluation]]
 - [[rag-retrieval-2026-lessons]]
+- [[route-aware-merged-retrieval-rerank]]
 
 ## fde
 - [[forward-deployed-engineer]]
@@ -137,9 +139,14 @@ last_updated: 2026-06-25
 
 ## rag
 - [[rag-retrieval-2026-lessons]]
+- [[route-aware-merged-retrieval-rerank]]
 
 ## retrieval
 - [[rag-retrieval-2026-lessons]]
+- [[route-aware-merged-retrieval-rerank]]
+
+## rerank
+- [[route-aware-merged-retrieval-rerank]]
 
 ## scaling
 - [[llm-pretrain-data-engineering]]
