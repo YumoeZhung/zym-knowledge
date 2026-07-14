@@ -1,7 +1,7 @@
 ---
 title: Tags Index
 created: 2026-05-19
-last_updated: 2026-07-06
+last_updated: 2026-07-14
 ---
 
 # Tags Index
@@ -17,9 +17,13 @@ last_updated: 2026-07-06
 - [[harness-as-moat]]
 - [[openspec-sdd]]
 - [[route-aware-merged-retrieval-rerank]]
+- [[skillopt-self-evolving-agent-skills]]
 
 ## agent-harness
 - [[agent-harness-durable-compaction-runtime-boundary]]
+
+## agent-skill
+- [[skillopt-self-evolving-agent-skills]]
 
 ## ai-strategy
 - [[meta-ai-pivot-2026]]
@@ -89,6 +93,7 @@ last_updated: 2026-07-06
 - [[claw-swe-bench-harness-evaluation]]
 - [[rag-retrieval-2026-lessons]]
 - [[route-aware-merged-retrieval-rerank]]
+- [[skillopt-self-evolving-agent-skills]]
 
 ## fde
 - [[forward-deployed-engineer]]
@@ -105,6 +110,7 @@ last_updated: 2026-07-06
 - [[claw-swe-bench-harness-evaluation]]
 - [[everything-claude-code]]
 - [[harness-as-moat]]
+- [[skillopt-self-evolving-agent-skills]]
 
 ## layoff
 - [[meta-ai-pivot-2026]]
@@ -118,6 +124,9 @@ last_updated: 2026-07-06
 
 ## meta
 - [[meta-ai-pivot-2026]]
+
+## microsoft-research
+- [[skillopt-self-evolving-agent-skills]]
 
 ## open-source
 - [[browser-harness]]
@@ -136,6 +145,9 @@ last_updated: 2026-07-06
 
 ## pretraining
 - [[llm-pretrain-data-engineering]]
+
+## prompt-optimization
+- [[skillopt-self-evolving-agent-skills]]
 
 ## rag
 - [[rag-retrieval-2026-lessons]]
@@ -159,6 +171,7 @@ last_updated: 2026-07-06
 
 ## self-improving
 - [[building-self-improving-agents]]
+- [[skillopt-self-evolving-agent-skills]]
 
 ## session-runtime
 - [[agent-harness-durable-compaction-runtime-boundary]]
@@ -171,6 +184,9 @@ last_updated: 2026-07-06
 
 ## task-engine
 - [[agent-harness-durable-compaction-runtime-boundary]]
+
+## text-optimization
+- [[skillopt-self-evolving-agent-skills]]
 
 ## verification
 - [[anthropic-claude-code-practices]]
