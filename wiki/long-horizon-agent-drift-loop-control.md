@@ -267,4 +267,3 @@ INIT
 - [[building-self-improving-agents]] — 执行、验证、修正的反馈闭环
 - [[claw-swe-bench-harness-evaluation]] — 把 Harness 和预算纳入真实评测单元
 - [[skillopt-self-evolving-agent-skills]] — 用独立 validation gate 防止单 case 自我确认
-
