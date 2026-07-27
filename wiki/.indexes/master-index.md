@@ -1,7 +1,7 @@
 ---
 title: Master Index
 created: 2026-05-19
-last_updated: 2026-07-14
+last_updated: 2026-07-27
 ---
 
 # Master Index
@@ -22,12 +22,13 @@ Central index of all wiki pages in the knowledge base.
 - [[llm-pretrain-data-engineering]] — LLM 预训练数据工程
 - [[meta-ai-pivot-2026]] — Meta 2026 AI 全面转型：裁员8000人与千亿美元豪赌
 - [[openspec-sdd]] — SDD：Spec-Driven Development 与 OpenSpec 框架
+- [[program-as-weights-fuzzy-functions]] — Program-as-Weights：把模糊函数编译成可复用权重
 - [[rag-retrieval-2026-lessons]] — 2026 RAG 调研：从 Full-doc 争论转向 Query-aware Retrieval
 - [[route-aware-merged-retrieval-rerank]] — Route-aware Merged Retrieval Rerank
 - [[skillopt-self-evolving-agent-skills]] — SkillOpt：把 SKILL.md 当作可训练参数
 
 ## Statistics
 
-- Total pages: 15
-- Total raw sources: 15
-- Last ingest: 2026-07-14
+- Total pages: 16
+- Total raw sources: 16
+- Last ingest: 2026-07-27

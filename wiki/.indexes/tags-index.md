@@ -1,7 +1,7 @@
 ---
 title: Tags Index
 created: 2026-05-19
-last_updated: 2026-07-14
+last_updated: 2026-07-27
 ---
 
 # Tags Index
@@ -16,6 +16,7 @@ last_updated: 2026-07-14
 - [[forward-deployed-engineer]]
 - [[harness-as-moat]]
 - [[openspec-sdd]]
+- [[program-as-weights-fuzzy-functions]]
 - [[route-aware-merged-retrieval-rerank]]
 - [[skillopt-self-evolving-agent-skills]]
 
@@ -80,6 +81,9 @@ last_updated: 2026-07-14
 ## durable-compaction
 - [[agent-harness-durable-compaction-runtime-boundary]]
 
+## edge-ai
+- [[program-as-weights-fuzzy-functions]]
+
 ## developer-tools
 - [[anthropic-claude-code-practices]]
 - [[everything-claude-code]]
@@ -101,6 +105,9 @@ last_updated: 2026-07-14
 ## flywheel
 - [[harness-as-moat]]
 
+## fuzzy-functions
+- [[program-as-weights-fuzzy-functions]]
+
 ## happy-bee
 - [[rag-retrieval-2026-lessons]]
 
@@ -112,12 +119,19 @@ last_updated: 2026-07-14
 - [[harness-as-moat]]
 - [[skillopt-self-evolving-agent-skills]]
 
+## hypernetwork
+- [[program-as-weights-fuzzy-functions]]
+
 ## layoff
 - [[meta-ai-pivot-2026]]
 
 ## llm
 - [[agent-system-architecture]]
 - [[llm-pretrain-data-engineering]]
+- [[program-as-weights-fuzzy-functions]]
+
+## lora
+- [[program-as-weights-fuzzy-functions]]
 
 ## long-context
 - [[rag-retrieval-2026-lessons]]
@@ -128,17 +142,26 @@ last_updated: 2026-07-14
 ## microsoft-research
 - [[skillopt-self-evolving-agent-skills]]
 
+## model-compilation
+- [[program-as-weights-fuzzy-functions]]
+
 ## open-source
 - [[browser-harness]]
 - [[claw-swe-bench-harness-evaluation]]
 - [[everything-claude-code]]
 - [[openspec-sdd]]
 
+## on-device
+- [[program-as-weights-fuzzy-functions]]
+
 ## organizational-change
 - [[meta-ai-pivot-2026]]
 
 ## palantir
 - [[forward-deployed-engineer]]
+
+## peft
+- [[program-as-weights-fuzzy-functions]]
 
 ## pmf
 - [[forward-deployed-engineer]]
@@ -172,6 +195,9 @@ last_updated: 2026-07-14
 ## self-improving
 - [[building-self-improving-agents]]
 - [[skillopt-self-evolving-agent-skills]]
+
+## small-model
+- [[program-as-weights-fuzzy-functions]]
 
 ## session-runtime
 - [[agent-harness-durable-compaction-runtime-boundary]]
