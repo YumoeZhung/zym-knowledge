@@ -1,7 +1,7 @@
 ---
 title: Tags Index
 created: 2026-05-19
-last_updated: 2026-07-27
+last_updated: 2026-07-28
 ---
 
 # Tags Index
@@ -15,6 +15,7 @@ last_updated: 2026-07-27
 - [[everything-claude-code]]
 - [[forward-deployed-engineer]]
 - [[harness-as-moat]]
+- [[long-horizon-agent-drift-loop-control]]
 - [[openspec-sdd]]
 - [[program-as-weights-fuzzy-functions]]
 - [[route-aware-merged-retrieval-rerank]]
@@ -22,6 +23,7 @@ last_updated: 2026-07-27
 
 ## agent-harness
 - [[agent-harness-durable-compaction-runtime-boundary]]
+- [[long-horizon-agent-drift-loop-control]]
 
 ## agent-skill
 - [[skillopt-self-evolving-agent-skills]]
@@ -95,6 +97,7 @@ last_updated: 2026-07-27
 ## evaluation
 - [[building-self-improving-agents]]
 - [[claw-swe-bench-harness-evaluation]]
+- [[long-horizon-agent-drift-loop-control]]
 - [[rag-retrieval-2026-lessons]]
 - [[route-aware-merged-retrieval-rerank]]
 - [[skillopt-self-evolving-agent-skills]]
@@ -117,6 +120,7 @@ last_updated: 2026-07-27
 - [[claw-swe-bench-harness-evaluation]]
 - [[everything-claude-code]]
 - [[harness-as-moat]]
+- [[long-horizon-agent-drift-loop-control]]
 - [[skillopt-self-evolving-agent-skills]]
 
 ## hypernetwork
@@ -154,6 +158,9 @@ last_updated: 2026-07-27
 ## on-device
 - [[program-as-weights-fuzzy-functions]]
 
+## observability
+- [[long-horizon-agent-drift-loop-control]]
+
 ## organizational-change
 - [[meta-ai-pivot-2026]]
 
@@ -183,6 +190,9 @@ last_updated: 2026-07-27
 ## rerank
 - [[route-aware-merged-retrieval-rerank]]
 
+## reliability
+- [[long-horizon-agent-drift-loop-control]]
+
 ## scaling
 - [[llm-pretrain-data-engineering]]
 
@@ -207,6 +217,7 @@ last_updated: 2026-07-27
 
 ## system-design
 - [[agent-system-architecture]]
+- [[long-horizon-agent-drift-loop-control]]
 
 ## task-engine
 - [[agent-harness-durable-compaction-runtime-boundary]]
@@ -216,3 +227,4 @@ last_updated: 2026-07-27
 
 ## verification
 - [[anthropic-claude-code-practices]]
+- [[long-horizon-agent-drift-loop-control]]

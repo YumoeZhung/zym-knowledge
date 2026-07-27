@@ -1,7 +1,7 @@
 ---
 title: Master Index
 created: 2026-05-19
-last_updated: 2026-07-27
+last_updated: 2026-07-28
 ---
 
 # Master Index
@@ -20,6 +20,7 @@ Central index of all wiki pages in the knowledge base.
 - [[forward-deployed-engineer]] — Forward Deployed Engineer (FDE)
 - [[harness-as-moat]] — Harness 壁垒之争：控制论视角
 - [[llm-pretrain-data-engineering]] — LLM 预训练数据工程
+- [[long-horizon-agent-drift-loop-control]] — 长任务 Agent 跑偏、绕路与死循环：Harness 控制闭环
 - [[meta-ai-pivot-2026]] — Meta 2026 AI 全面转型：裁员8000人与千亿美元豪赌
 - [[openspec-sdd]] — SDD：Spec-Driven Development 与 OpenSpec 框架
 - [[program-as-weights-fuzzy-functions]] — Program-as-Weights：把模糊函数编译成可复用权重
@@ -29,6 +30,6 @@ Central index of all wiki pages in the knowledge base.
 
 ## Statistics
 
-- Total pages: 16
-- Total raw sources: 16
-- Last ingest: 2026-07-27
+- Total pages: 17
+- Total raw sources: 17
+- Last ingest: 2026-07-28
