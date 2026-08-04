@@ -1,7 +1,7 @@
 ---
 title: Master Index
 created: 2026-05-19
-last_updated: 2026-07-28
+last_updated: 2026-08-04
 ---
 
 # Master Index
@@ -27,9 +27,10 @@ Central index of all wiki pages in the knowledge base.
 - [[rag-retrieval-2026-lessons]] — 2026 RAG 调研：从 Full-doc 争论转向 Query-aware Retrieval
 - [[route-aware-merged-retrieval-rerank]] — Route-aware Merged Retrieval Rerank
 - [[skillopt-self-evolving-agent-skills]] — SkillOpt：把 SKILL.md 当作可训练参数
+- [[version-bound-signed-cursor]] — 版本绑定且带 HMAC 签名的 Cursor：保证 Agent 文档续读一致性
 
 ## Statistics
 
-- Total pages: 17
-- Total raw sources: 17
-- Last ingest: 2026-07-28
+- Total pages: 18
+- Total raw sources: 18
+- Last ingest: 2026-08-04
