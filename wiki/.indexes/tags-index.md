@@ -1,7 +1,7 @@
 ---
 title: Tags Index
 created: 2026-05-19
-last_updated: 2026-08-04
+last_updated: 2026-08-06
 ---
 
 # Tags Index
@@ -85,6 +85,9 @@ last_updated: 2026-08-04
 ## deployment
 - [[forward-deployed-engineer]]
 
+## document-parsing
+- [[cross-page-table-parent-child-retrieval]]
+
 ## durable-compaction
 - [[agent-harness-durable-compaction-runtime-boundary]]
 
@@ -133,6 +136,9 @@ last_updated: 2026-08-04
 
 ## hypernetwork
 - [[program-as-weights-fuzzy-functions]]
+
+## knowledge-governance
+- [[cross-page-table-parent-child-retrieval]]
 
 ## layoff
 - [[meta-ai-pivot-2026]]
@@ -191,11 +197,13 @@ last_updated: 2026-08-04
 - [[skillopt-self-evolving-agent-skills]]
 
 ## rag
+- [[cross-page-table-parent-child-retrieval]]
 - [[rag-retrieval-2026-lessons]]
 - [[route-aware-merged-retrieval-rerank]]
 - [[version-bound-signed-cursor]]
 
 ## retrieval
+- [[cross-page-table-parent-child-retrieval]]
 - [[rag-retrieval-2026-lessons]]
 - [[route-aware-merged-retrieval-rerank]]
 
@@ -236,8 +244,12 @@ last_updated: 2026-08-04
 
 ## system-design
 - [[agent-system-architecture]]
+- [[cross-page-table-parent-child-retrieval]]
 - [[long-horizon-agent-drift-loop-control]]
 - [[version-bound-signed-cursor]]
+
+## table-retrieval
+- [[cross-page-table-parent-child-retrieval]]
 
 ## task-engine
 - [[agent-harness-durable-compaction-runtime-boundary]]
