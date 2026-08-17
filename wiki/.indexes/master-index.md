@@ -1,7 +1,7 @@
 ---
 title: Master Index
 created: 2026-05-19
-last_updated: 2026-08-06
+last_updated: 2026-08-17
 ---
 
 # Master Index
@@ -26,12 +26,13 @@ Central index of all wiki pages in the knowledge base.
 - [[openspec-sdd]] — SDD：Spec-Driven Development 与 OpenSpec 框架
 - [[program-as-weights-fuzzy-functions]] — Program-as-Weights：把模糊函数编译成可复用权重
 - [[rag-retrieval-2026-lessons]] — 2026 RAG 调研：从 Full-doc 争论转向 Query-aware Retrieval
+- [[real-world-agent-benchmark-taxonomy]] — 真实世界 Agent 测评集分类：从通用能力到长期工作闭环
 - [[route-aware-merged-retrieval-rerank]] — Route-aware Merged Retrieval Rerank
 - [[skillopt-self-evolving-agent-skills]] — SkillOpt：把 SKILL.md 当作可训练参数
 - [[version-bound-signed-cursor]] — 版本绑定且带 HMAC 签名的 Cursor：保证 Agent 文档续读一致性
 
 ## Statistics
 
-- Total pages: 19
-- Total raw sources: 19
-- Last ingest: 2026-08-06
+- Total pages: 20
+- Total raw sources: 20
+- Last ingest: 2026-08-17

@@ -1,7 +1,7 @@
 ---
 title: Tags Index
 created: 2026-05-19
-last_updated: 2026-08-06
+last_updated: 2026-08-17
 ---
 
 # Tags Index
@@ -18,6 +18,7 @@ last_updated: 2026-08-06
 - [[long-horizon-agent-drift-loop-control]]
 - [[openspec-sdd]]
 - [[program-as-weights-fuzzy-functions]]
+- [[real-world-agent-benchmark-taxonomy]]
 - [[route-aware-merged-retrieval-rerank]]
 - [[skillopt-self-evolving-agent-skills]]
 - [[version-bound-signed-cursor]]
@@ -47,6 +48,7 @@ last_updated: 2026-08-06
 
 ## benchmark
 - [[claw-swe-bench-harness-evaluation]]
+- [[real-world-agent-benchmark-taxonomy]]
 
 ## close-the-loop
 - [[building-self-improving-agents]]
@@ -107,6 +109,7 @@ last_updated: 2026-08-06
 - [[claw-swe-bench-harness-evaluation]]
 - [[long-horizon-agent-drift-loop-control]]
 - [[rag-retrieval-2026-lessons]]
+- [[real-world-agent-benchmark-taxonomy]]
 - [[route-aware-merged-retrieval-rerank]]
 - [[skillopt-self-evolving-agent-skills]]
 
@@ -129,6 +132,7 @@ last_updated: 2026-08-06
 - [[everything-claude-code]]
 - [[harness-as-moat]]
 - [[long-horizon-agent-drift-loop-control]]
+- [[real-world-agent-benchmark-taxonomy]]
 - [[skillopt-self-evolving-agent-skills]]
 
 ## hmac
@@ -153,6 +157,9 @@ last_updated: 2026-08-06
 
 ## long-context
 - [[rag-retrieval-2026-lessons]]
+
+## long-horizon
+- [[real-world-agent-benchmark-taxonomy]]
 
 ## meta
 - [[meta-ai-pivot-2026]]
@@ -214,6 +221,9 @@ last_updated: 2026-08-06
 - [[long-horizon-agent-drift-loop-control]]
 - [[version-bound-signed-cursor]]
 
+## real-world-agent
+- [[real-world-agent-benchmark-taxonomy]]
+
 ## scaling
 - [[llm-pretrain-data-engineering]]
 
@@ -256,6 +266,9 @@ last_updated: 2026-08-06
 
 ## text-optimization
 - [[skillopt-self-evolving-agent-skills]]
+
+## tool-use
+- [[real-world-agent-benchmark-taxonomy]]
 
 ## verification
 - [[anthropic-claude-code-practices]]
