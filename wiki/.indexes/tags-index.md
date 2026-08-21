@@ -1,7 +1,7 @@
 ---
 title: Tags Index
 created: 2026-05-19
-last_updated: 2026-08-17
+last_updated: 2026-08-21
 ---
 
 # Tags Index
@@ -25,8 +25,15 @@ last_updated: 2026-08-17
 
 ## agent-harness
 - [[agent-harness-durable-compaction-runtime-boundary]]
+- [[agent-system-architecture]]
 - [[long-horizon-agent-drift-loop-control]]
 - [[version-bound-signed-cursor]]
+
+## agent-loop
+- [[agent-system-architecture]]
+
+## agent-runtime
+- [[agent-system-architecture]]
 
 ## agent-skill
 - [[skillopt-self-evolving-agent-skills]]
@@ -171,6 +178,7 @@ last_updated: 2026-08-17
 - [[program-as-weights-fuzzy-functions]]
 
 ## open-source
+- [[agent-system-architecture]]
 - [[browser-harness]]
 - [[claw-swe-bench-harness-evaluation]]
 - [[everything-claude-code]]
