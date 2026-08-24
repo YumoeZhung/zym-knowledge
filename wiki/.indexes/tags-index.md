@@ -1,10 +1,13 @@
 ---
 title: Tags Index
 created: 2026-05-19
-last_updated: 2026-08-21
+last_updated: 2026-08-24
 ---
 
 # Tags Index
+
+## advantage-estimation
+- [[ppo-critic-td-error-gae]]
 
 ## agent
 - [[agent-system-architecture]]
@@ -82,6 +85,9 @@ last_updated: 2026-08-21
 ## cost-analysis
 - [[claw-swe-bench-harness-evaluation]]
 
+## critic
+- [[ppo-critic-td-error-gae]]
+
 ## cybernetics
 - [[harness-as-moat]]
 
@@ -129,6 +135,9 @@ last_updated: 2026-08-21
 ## fuzzy-functions
 - [[program-as-weights-fuzzy-functions]]
 
+## gae
+- [[ppo-critic-td-error-gae]]
+
 ## happy-bee
 - [[rag-retrieval-2026-lessons]]
 
@@ -158,6 +167,7 @@ last_updated: 2026-08-21
 - [[agent-system-architecture]]
 - [[llm-pretrain-data-engineering]]
 - [[program-as-weights-fuzzy-functions]]
+- [[ppo-critic-td-error-gae]]
 
 ## lora
 - [[program-as-weights-fuzzy-functions]]
@@ -205,6 +215,9 @@ last_updated: 2026-08-21
 ## pmf
 - [[forward-deployed-engineer]]
 
+## ppo
+- [[ppo-critic-td-error-gae]]
+
 ## pretraining
 - [[llm-pretrain-data-engineering]]
 
@@ -216,6 +229,9 @@ last_updated: 2026-08-21
 - [[rag-retrieval-2026-lessons]]
 - [[route-aware-merged-retrieval-rerank]]
 - [[version-bound-signed-cursor]]
+
+## reinforcement-learning
+- [[ppo-critic-td-error-gae]]
 
 ## retrieval
 - [[cross-page-table-parent-child-retrieval]]
@@ -277,6 +293,9 @@ last_updated: 2026-08-21
 
 ## tool-use
 - [[real-world-agent-benchmark-taxonomy]]
+
+## td-learning
+- [[ppo-critic-td-error-gae]]
 
 ## verification
 - [[anthropic-claude-code-practices]]

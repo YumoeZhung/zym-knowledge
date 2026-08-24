@@ -1,7 +1,7 @@
 ---
 title: Master Index
 created: 2026-05-19
-last_updated: 2026-08-21
+last_updated: 2026-08-24
 ---
 
 # Master Index
@@ -25,6 +25,7 @@ Central index of all wiki pages in the knowledge base.
 - [[meta-ai-pivot-2026]] — Meta 2026 AI 全面转型：裁员8000人与千亿美元豪赌
 - [[openspec-sdd]] — SDD：Spec-Driven Development 与 OpenSpec 框架
 - [[program-as-weights-fuzzy-functions]] — Program-as-Weights：把模糊函数编译成可复用权重
+- [[ppo-critic-td-error-gae]] — PPO 中的 Critic、TD 误差与 GAE
 - [[rag-retrieval-2026-lessons]] — 2026 RAG 调研：从 Full-doc 争论转向 Query-aware Retrieval
 - [[real-world-agent-benchmark-taxonomy]] — 真实世界 Agent 测评集分类：从通用能力到长期工作闭环
 - [[route-aware-merged-retrieval-rerank]] — Route-aware Merged Retrieval Rerank
@@ -33,6 +34,6 @@ Central index of all wiki pages in the knowledge base.
 
 ## Statistics
 
-- Total pages: 20
-- Total raw sources: 21
-- Last ingest: 2026-08-21
+- Total pages: 21
+- Total raw sources: 22
+- Last ingest: 2026-08-24
