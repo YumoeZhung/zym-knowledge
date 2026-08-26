@@ -172,5 +172,6 @@ prompt + 可选solution/验证信息
 
 ## Related
 
+- [[differentiability-derivatives-gradients-backprop]]
 - [[ppo-critic-td-error-gae]]
 - [[llm-pretrain-data-engineering]]

@@ -56,6 +56,9 @@ last_updated: 2026-08-26
 - [[agent-harness-durable-compaction-runtime-boundary]]
 - [[agent-system-architecture]]
 
+## backpropagation
+- [[differentiability-derivatives-gradients-backprop]]
+
 ## benchmark
 - [[claw-swe-bench-harness-evaluation]]
 - [[real-world-agent-benchmark-taxonomy]]
@@ -68,6 +71,9 @@ last_updated: 2026-08-26
 
 ## browser-automation
 - [[browser-harness]]
+
+## calculus
+- [[differentiability-derivatives-gradients-backprop]]
 
 ## claude-code
 - [[anthropic-claude-code-practices]]
@@ -102,6 +108,9 @@ last_updated: 2026-08-26
 
 ## deployment
 - [[forward-deployed-engineer]]
+
+## differentiability
+- [[differentiability-derivatives-gradients-backprop]]
 
 ## document-parsing
 - [[cross-page-table-parent-child-retrieval]]
@@ -140,6 +149,9 @@ last_updated: 2026-08-26
 
 ## gae
 - [[ppo-critic-td-error-gae]]
+
+## gradient
+- [[differentiability-derivatives-gradients-backprop]]
 
 ## grpo
 - [[llm-ppo-dpo-grpo-comparison]]
@@ -248,6 +260,7 @@ last_updated: 2026-08-26
 - [[version-bound-signed-cursor]]
 
 ## reinforcement-learning
+- [[differentiability-derivatives-gradients-backprop]]
 - [[llm-ppo-dpo-grpo-comparison]]
 - [[ppo-critic-td-error-gae]]
 
