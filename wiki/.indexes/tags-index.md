@@ -7,6 +7,7 @@ last_updated: 2026-08-26
 # Tags Index
 
 ## advantage-estimation
+- [[llm-rl-optimization-signal-pipeline]]
 - [[ppo-critic-td-error-gae]]
 
 ## agent
@@ -63,9 +64,6 @@ last_updated: 2026-08-26
 - [[claw-swe-bench-harness-evaluation]]
 - [[real-world-agent-benchmark-taxonomy]]
 
-## close-the-loop
-- [[building-self-improving-agents]]
-
 ## big-tech
 - [[meta-ai-pivot-2026]]
 
@@ -79,14 +77,14 @@ last_updated: 2026-08-26
 - [[anthropic-claude-code-practices]]
 - [[everything-claude-code]]
 
+## close-the-loop
+- [[building-self-improving-agents]]
+
 ## coding-agent
 - [[claw-swe-bench-harness-evaluation]]
 
 ## competitive-moat
 - [[harness-as-moat]]
-
-## cursor
-- [[version-bound-signed-cursor]]
 
 ## cost-analysis
 - [[claw-swe-bench-harness-evaluation]]
@@ -94,11 +92,11 @@ last_updated: 2026-08-26
 ## critic
 - [[ppo-critic-td-error-gae]]
 
+## cursor
+- [[version-bound-signed-cursor]]
+
 ## cybernetics
 - [[harness-as-moat]]
-
-## dpo
-- [[llm-ppo-dpo-grpo-comparison]]
 
 ## data-engineering
 - [[llm-pretrain-data-engineering]]
@@ -109,22 +107,26 @@ last_updated: 2026-08-26
 ## deployment
 - [[forward-deployed-engineer]]
 
+## developer-tools
+- [[anthropic-claude-code-practices]]
+- [[everything-claude-code]]
+- [[openspec-sdd]]
+
 ## differentiability
 - [[differentiability-derivatives-gradients-backprop]]
 
 ## document-parsing
 - [[cross-page-table-parent-child-retrieval]]
 
+## dpo
+- [[llm-ppo-dpo-grpo-comparison]]
+- [[llm-rl-optimization-signal-pipeline]]
+
 ## durable-compaction
 - [[agent-harness-durable-compaction-runtime-boundary]]
 
 ## edge-ai
 - [[program-as-weights-fuzzy-functions]]
-
-## developer-tools
-- [[anthropic-claude-code-practices]]
-- [[everything-claude-code]]
-- [[openspec-sdd]]
 
 ## enterprise-ai
 - [[forward-deployed-engineer]]
@@ -155,6 +157,7 @@ last_updated: 2026-08-26
 
 ## grpo
 - [[llm-ppo-dpo-grpo-comparison]]
+- [[llm-rl-optimization-signal-pipeline]]
 
 ## happy-bee
 - [[rag-retrieval-2026-lessons]]
@@ -185,10 +188,8 @@ last_updated: 2026-08-26
 - [[agent-system-architecture]]
 - [[llm-ppo-dpo-grpo-comparison]]
 - [[llm-pretrain-data-engineering]]
-- [[program-as-weights-fuzzy-functions]]
+- [[llm-rl-optimization-signal-pipeline]]
 - [[ppo-critic-td-error-gae]]
-
-## lora
 - [[program-as-weights-fuzzy-functions]]
 
 ## long-context
@@ -196,6 +197,9 @@ last_updated: 2026-08-26
 
 ## long-horizon
 - [[real-world-agent-benchmark-taxonomy]]
+
+## lora
+- [[program-as-weights-fuzzy-functions]]
 
 ## meta
 - [[meta-ai-pivot-2026]]
@@ -206,6 +210,12 @@ last_updated: 2026-08-26
 ## model-compilation
 - [[program-as-weights-fuzzy-functions]]
 
+## observability
+- [[long-horizon-agent-drift-loop-control]]
+
+## on-device
+- [[program-as-weights-fuzzy-functions]]
+
 ## open-source
 - [[agent-system-architecture]]
 - [[browser-harness]]
@@ -213,17 +223,14 @@ last_updated: 2026-08-26
 - [[everything-claude-code]]
 - [[openspec-sdd]]
 
-## pagination
-- [[version-bound-signed-cursor]]
-
-## on-device
-- [[program-as-weights-fuzzy-functions]]
-
-## observability
-- [[long-horizon-agent-drift-loop-control]]
+## optimization
+- [[llm-rl-optimization-signal-pipeline]]
 
 ## organizational-change
 - [[meta-ai-pivot-2026]]
+
+## pagination
+- [[version-bound-signed-cursor]]
 
 ## palantir
 - [[forward-deployed-engineer]]
@@ -237,11 +244,15 @@ last_updated: 2026-08-26
 ## policy-clipping
 - [[ppo-critic-td-error-gae]]
 
+## policy-gradient
+- [[llm-rl-optimization-signal-pipeline]]
+
 ## policy-optimization
 - [[llm-ppo-dpo-grpo-comparison]]
 
 ## ppo
 - [[llm-ppo-dpo-grpo-comparison]]
+- [[llm-rl-optimization-signal-pipeline]]
 - [[ppo-critic-td-error-gae]]
 
 ## preference-optimization
@@ -259,40 +270,44 @@ last_updated: 2026-08-26
 - [[route-aware-merged-retrieval-rerank]]
 - [[version-bound-signed-cursor]]
 
-## reinforcement-learning
-- [[differentiability-derivatives-gradients-backprop]]
-- [[llm-ppo-dpo-grpo-comparison]]
-- [[ppo-critic-td-error-gae]]
+## real-world-agent
+- [[real-world-agent-benchmark-taxonomy]]
 
 ## reference-model
 - [[ppo-critic-td-error-gae]]
 
-## rlvr
+## reinforcement-learning
+- [[differentiability-derivatives-gradients-backprop]]
 - [[llm-ppo-dpo-grpo-comparison]]
+- [[llm-rl-optimization-signal-pipeline]]
+- [[ppo-critic-td-error-gae]]
+
+## reliability
+- [[long-horizon-agent-drift-loop-control]]
+- [[version-bound-signed-cursor]]
+
+## rerank
+- [[route-aware-merged-retrieval-rerank]]
 
 ## retrieval
 - [[cross-page-table-parent-child-retrieval]]
 - [[rag-retrieval-2026-lessons]]
 - [[route-aware-merged-retrieval-rerank]]
 
-## rerank
-- [[route-aware-merged-retrieval-rerank]]
+## reward-modeling
+- [[llm-rl-optimization-signal-pipeline]]
 
-## reliability
-- [[long-horizon-agent-drift-loop-control]]
-- [[version-bound-signed-cursor]]
-
-## real-world-agent
-- [[real-world-agent-benchmark-taxonomy]]
+## rlvr
+- [[llm-ppo-dpo-grpo-comparison]]
 
 ## scaling
 - [[llm-pretrain-data-engineering]]
 
-## security
-- [[version-bound-signed-cursor]]
-
 ## sdd
 - [[openspec-sdd]]
+
+## security
+- [[version-bound-signed-cursor]]
 
 ## self-healing
 - [[browser-harness]]
@@ -301,14 +316,14 @@ last_updated: 2026-08-26
 - [[building-self-improving-agents]]
 - [[skillopt-self-evolving-agent-skills]]
 
+## session-runtime
+- [[agent-harness-durable-compaction-runtime-boundary]]
+
 ## small-model
 - [[program-as-weights-fuzzy-functions]]
 
 ## snapshot-consistency
 - [[version-bound-signed-cursor]]
-
-## session-runtime
-- [[agent-harness-durable-compaction-runtime-boundary]]
 
 ## spec-driven-development
 - [[openspec-sdd]]
@@ -325,14 +340,14 @@ last_updated: 2026-08-26
 ## task-engine
 - [[agent-harness-durable-compaction-runtime-boundary]]
 
+## td-learning
+- [[ppo-critic-td-error-gae]]
+
 ## text-optimization
 - [[skillopt-self-evolving-agent-skills]]
 
 ## tool-use
 - [[real-world-agent-benchmark-taxonomy]]
-
-## td-learning
-- [[ppo-critic-td-error-gae]]
 
 ## verification
 - [[anthropic-claude-code-practices]]

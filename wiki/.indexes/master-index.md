@@ -23,11 +23,12 @@ Central index of all wiki pages in the knowledge base.
 - [[harness-as-moat]] — Harness 壁垒之争：控制论视角
 - [[llm-ppo-dpo-grpo-comparison]] — 大模型后训练：PPO、DPO 与 GRPO 对比
 - [[llm-pretrain-data-engineering]] — LLM 预训练数据工程
+- [[llm-rl-optimization-signal-pipeline]] — 大模型强化学习优化链：从 Reward 到 Loss
 - [[long-horizon-agent-drift-loop-control]] — 长任务 Agent 跑偏、绕路与死循环：Harness 控制闭环
 - [[meta-ai-pivot-2026]] — Meta 2026 AI 全面转型：裁员8000人与千亿美元豪赌
 - [[openspec-sdd]] — SDD：Spec-Driven Development 与 OpenSpec 框架
-- [[program-as-weights-fuzzy-functions]] — Program-as-Weights：把模糊函数编译成可复用权重
 - [[ppo-critic-td-error-gae]] — PPO 中的 Critic、TD 误差与 GAE
+- [[program-as-weights-fuzzy-functions]] — Program-as-Weights：把模糊函数编译成可复用权重
 - [[rag-retrieval-2026-lessons]] — 2026 RAG 调研：从 Full-doc 争论转向 Query-aware Retrieval
 - [[real-world-agent-benchmark-taxonomy]] — 真实世界 Agent 测评集分类：从通用能力到长期工作闭环
 - [[route-aware-merged-retrieval-rerank]] — Route-aware Merged Retrieval Rerank
@@ -36,6 +37,6 @@ Central index of all wiki pages in the knowledge base.
 
 ## Statistics
 
-- Total pages: 23
-- Total raw sources: 24
+- Total pages: 24
+- Total raw sources: 25
 - Last ingest: 2026-08-26

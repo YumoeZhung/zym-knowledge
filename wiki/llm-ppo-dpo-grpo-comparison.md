@@ -172,6 +172,7 @@ prompt + 可选solution/验证信息
 
 ## Related
 
+- [[llm-rl-optimization-signal-pipeline]]
 - [[differentiability-derivatives-gradients-backprop]]
 - [[ppo-critic-td-error-gae]]
 - [[llm-pretrain-data-engineering]]
