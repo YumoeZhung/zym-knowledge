@@ -1,9 +1,9 @@
 ---
 title: PPO 中的 Critic、TD 误差与 GAE
 created: 2026-08-24
-last_updated: 2026-08-24
-tags: [advantage-estimation, critic, gae, llm, ppo, reinforcement-learning, td-learning]
-sources: [raw/2026-08-24-ppo-critic-td-error-gae.md]
+last_updated: 2026-08-26
+tags: [advantage-estimation, critic, gae, llm, policy-clipping, ppo, reference-model, reinforcement-learning, td-learning]
+sources: [raw/2026-08-24-ppo-critic-td-error-gae.md, raw/2026-08-26-llm-ppo-dpo-grpo-old-policy-reference-clip.md]
 ---
 
 # PPO 中的 Critic、TD 误差与 GAE
@@ -83,6 +83,61 @@ advantages            # 通常由GAE计算
 | PPO | Prompt集 + 在线生成的rollout | 更新Policy和Critic |
 
 PPO通常不会在策略更新阶段直接把 `chosen/rejected` 当作训练样本；偏好对主要用于先训练 Reward Model。由于它是 On-policy 算法，旧 rollout 在策略更新后会逐渐失效，通常只能训练少量 epoch，随后必须重新采样。
+
+## Old Policy 与 Reference Model
+
+PPO 中经常同时出现 Old Policy 和 Reference Model，但它们的时间尺度和用途不同：
+
+| 对比 | Old Policy | Reference Model |
+|---|---|---|
+| 来源 | 本轮 rollout 或更新开始前的 Policy | 通常是初始 SFT 模型 |
+| 是否刷新 | 随训练轮次刷新 | 通常始终冻结 |
+| 主要计算 | 新旧策略概率比 | 当前策略相对参考策略的 KL |
+| 约束目标 | 单轮不要更新过猛 | 长期不要偏离原模型过远 |
+
+Old Policy 代表生成这批 rollout 时的行为策略。PPO 用它计算：
+
+```text
+ratio_t = pi_theta(a_t|s_t) / pi_old(a_t|s_t)
+```
+
+工程上不一定需要常驻一份完整 Old Policy；保存每个回答 Token 在生成时的 `old_logprob` 即可：
+
+```text
+ratio_t = exp(new_logprob_t - old_logprob_t)
+```
+
+Reference Model 则通常是冻结的初始 SFT 模型，用于计算 KL 惩罚。可以把 Old Policy 记成“上一帧”，把 Reference Model 记成“原点”。
+
+## PPO Clip 如何计算
+
+普通 clip 函数是：
+
+```text
+clip(x, lower, upper) = min(max(x, lower), upper)
+```
+
+当 `epsilon=0.2` 时，PPO 把用于目标计算的 ratio 裁剪到 `[0.8, 1.2]`：
+
+| ratio | clipped ratio |
+|---:|---:|
+| 0.5 | 0.8 |
+| 0.9 | 0.9 |
+| 1.0 | 1.0 |
+| 1.1 | 1.1 |
+| 1.5 | 1.2 |
+
+PPO 的 Clipped Surrogate Objective 为：
+
+```text
+L_clip = E[min(ratio_t * A_t,
+               clip(ratio_t, 1-epsilon, 1+epsilon) * A_t)]
+```
+
+- `A_t > 0` 时，策略希望提高该动作概率；超过 `1+epsilon` 后不再获得额外收益。
+- `A_t < 0` 时，策略希望降低该动作概率；低于 `1-epsilon` 后不再获得额外收益。
+
+Clip 裁剪的是损失函数里的概率比，而不是参数或真实概率的硬边界。共享参数、其他 Token 和其他损失仍可能让实际 ratio 超出范围。
 
 ## Critic 估计的是状态价值
 
@@ -207,4 +262,5 @@ Advantage：当前动作最终比基准好多少？
 
 ## Related
 
+- [[llm-ppo-dpo-grpo-comparison]]
 - [[llm-pretrain-data-engineering]]

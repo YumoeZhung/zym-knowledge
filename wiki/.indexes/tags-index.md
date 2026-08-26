@@ -1,7 +1,7 @@
 ---
 title: Tags Index
 created: 2026-05-19
-last_updated: 2026-08-24
+last_updated: 2026-08-26
 ---
 
 # Tags Index
@@ -91,6 +91,9 @@ last_updated: 2026-08-24
 ## cybernetics
 - [[harness-as-moat]]
 
+## dpo
+- [[llm-ppo-dpo-grpo-comparison]]
+
 ## data-engineering
 - [[llm-pretrain-data-engineering]]
 
@@ -138,6 +141,9 @@ last_updated: 2026-08-24
 ## gae
 - [[ppo-critic-td-error-gae]]
 
+## grpo
+- [[llm-ppo-dpo-grpo-comparison]]
+
 ## happy-bee
 - [[rag-retrieval-2026-lessons]]
 
@@ -165,6 +171,7 @@ last_updated: 2026-08-24
 
 ## llm
 - [[agent-system-architecture]]
+- [[llm-ppo-dpo-grpo-comparison]]
 - [[llm-pretrain-data-engineering]]
 - [[program-as-weights-fuzzy-functions]]
 - [[ppo-critic-td-error-gae]]
@@ -215,8 +222,18 @@ last_updated: 2026-08-24
 ## pmf
 - [[forward-deployed-engineer]]
 
-## ppo
+## policy-clipping
 - [[ppo-critic-td-error-gae]]
+
+## policy-optimization
+- [[llm-ppo-dpo-grpo-comparison]]
+
+## ppo
+- [[llm-ppo-dpo-grpo-comparison]]
+- [[ppo-critic-td-error-gae]]
+
+## preference-optimization
+- [[llm-ppo-dpo-grpo-comparison]]
 
 ## pretraining
 - [[llm-pretrain-data-engineering]]
@@ -231,7 +248,14 @@ last_updated: 2026-08-24
 - [[version-bound-signed-cursor]]
 
 ## reinforcement-learning
+- [[llm-ppo-dpo-grpo-comparison]]
 - [[ppo-critic-td-error-gae]]
+
+## reference-model
+- [[ppo-critic-td-error-gae]]
+
+## rlvr
+- [[llm-ppo-dpo-grpo-comparison]]
 
 ## retrieval
 - [[cross-page-table-parent-child-retrieval]]

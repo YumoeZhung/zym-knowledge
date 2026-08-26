@@ -1,7 +1,7 @@
 ---
 title: Master Index
 created: 2026-05-19
-last_updated: 2026-08-24
+last_updated: 2026-08-26
 ---
 
 # Master Index
@@ -20,6 +20,7 @@ Central index of all wiki pages in the knowledge base.
 - [[everything-claude-code]] — Everything Claude Code (ECC)：近20万Star的Agent Harness配置框架
 - [[forward-deployed-engineer]] — Forward Deployed Engineer (FDE)
 - [[harness-as-moat]] — Harness 壁垒之争：控制论视角
+- [[llm-ppo-dpo-grpo-comparison]] — 大模型后训练：PPO、DPO 与 GRPO 对比
 - [[llm-pretrain-data-engineering]] — LLM 预训练数据工程
 - [[long-horizon-agent-drift-loop-control]] — 长任务 Agent 跑偏、绕路与死循环：Harness 控制闭环
 - [[meta-ai-pivot-2026]] — Meta 2026 AI 全面转型：裁员8000人与千亿美元豪赌
@@ -34,6 +35,6 @@ Central index of all wiki pages in the knowledge base.
 
 ## Statistics
 
-- Total pages: 21
-- Total raw sources: 22
-- Last ingest: 2026-08-24
+- Total pages: 22
+- Total raw sources: 23
+- Last ingest: 2026-08-26
