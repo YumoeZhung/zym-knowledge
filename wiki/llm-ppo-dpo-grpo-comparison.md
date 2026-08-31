@@ -1,9 +1,9 @@
 ---
 title: 大模型后训练：PPO、DPO 与 GRPO 对比
 created: 2026-08-26
-last_updated: 2026-08-26
+last_updated: 2026-08-31
 tags: [dpo, grpo, llm, policy-optimization, ppo, preference-optimization, reinforcement-learning, rlvr]
-sources: [raw/2026-08-26-llm-ppo-dpo-grpo-old-policy-reference-clip.md]
+sources: [raw/2026-08-26-llm-ppo-dpo-grpo-old-policy-reference-clip.md, raw/2026-08-31-long-horizon-agent-opd.md]
 ---
 
 # 大模型后训练：PPO、DPO 与 GRPO 对比
@@ -100,6 +100,8 @@ A_i = (r_i - mean(r)) / std(r)
 
 GRPO 省去了 Critic，但并不等于训练便宜：同一 Prompt 需要生成多条回答，rollout 仍可能是主要成本。若一组回答的奖励相同或近似相同，组内 Advantage 就会失去有效信号。
 
+在长轨迹 Agent 中，最终 outcome reward 还会带来粗粒度信用分配：失败轨迹中的正确步骤可能被一并惩罚，成功轨迹中的无效绕路也可能被一并奖励。DeepSeek V4 和 GLM 使用的 OPD 缓解思路见 [[long-horizon-agent-opd]]。
+
 ## PPO 中两个容易混淆的模型
 
 | 对比 | Old Policy | Reference Model |
@@ -176,3 +178,4 @@ prompt + 可选solution/验证信息
 - [[differentiability-derivatives-gradients-backprop]]
 - [[ppo-critic-td-error-gae]]
 - [[llm-pretrain-data-engineering]]
+- [[long-horizon-agent-opd]]
