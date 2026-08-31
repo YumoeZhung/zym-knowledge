@@ -1,9 +1,9 @@
 ---
 title: 大模型强化学习优化链：从 Reward 到 Loss
 created: 2026-08-26
-last_updated: 2026-08-26
+last_updated: 2026-08-31
 tags: [advantage-estimation, dpo, grpo, llm, optimization, policy-gradient, ppo, reinforcement-learning, reward-modeling]
-sources: [raw/2026-08-26-llm-rl-optimization-signal-pipeline.md]
+sources: [raw/2026-08-26-llm-rl-optimization-signal-pipeline.md, raw/2026-08-31-long-horizon-agent-opd.md]
 ---
 
 # 大模型强化学习优化链：从 Reward 到 Loss
@@ -167,7 +167,7 @@ A_i = (r_i - mean(r)) / (std(r) + epsilon)
 
 组内标准化不是 Reward 函数，而是把绝对 Reward 转换成相对 Advantage。如果一组回答 Reward 相同，Advantage 接近零，几乎没有有效策略学习信号。
 
-GRPO 没有 Critic 和 Value Loss，但同一 Prompt 需要多次生成，rollout 成本依然可能很高。
+GRPO 没有 Critic 和 Value Loss，但同一 Prompt 需要多次生成，rollout 成本依然可能很高。对于长轨迹 Agent，若只用最终 reward，整条轨迹的动作还可能共享过于粗糙的信用信号；OPD如何在学生自己的轨迹状态上提供逐 Token 教师分布，见 [[long-horizon-agent-opd]]。
 
 ## DPO：跳过显式 Reward 和 Advantage
 
@@ -239,3 +239,4 @@ prompt/chosen/rejected
 - [[llm-ppo-dpo-grpo-comparison]]
 - [[ppo-critic-td-error-gae]]
 - [[differentiability-derivatives-gradients-backprop]]
+- [[long-horizon-agent-opd]]
