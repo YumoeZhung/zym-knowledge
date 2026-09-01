@@ -1,7 +1,7 @@
 ---
 title: Tags Index
 created: 2026-05-19
-last_updated: 2026-08-26
+last_updated: 2026-09-01
 ---
 
 # Tags Index
@@ -86,6 +86,9 @@ last_updated: 2026-08-26
 ## competitive-moat
 - [[harness-as-moat]]
 
+## constrained-decoding
+- [[constrained-decoding]]
+
 ## cost-analysis
 - [[claw-swe-bench-harness-evaluation]]
 
@@ -143,6 +146,9 @@ last_updated: 2026-08-26
 ## fde
 - [[forward-deployed-engineer]]
 
+## finite-state-machine
+- [[constrained-decoding]]
+
 ## flywheel
 - [[harness-as-moat]]
 
@@ -178,6 +184,9 @@ last_updated: 2026-08-26
 ## hypernetwork
 - [[program-as-weights-fuzzy-functions]]
 
+## json-schema
+- [[constrained-decoding]]
+
 ## knowledge-governance
 - [[cross-page-table-parent-child-retrieval]]
 
@@ -186,11 +195,15 @@ last_updated: 2026-08-26
 
 ## llm
 - [[agent-system-architecture]]
+- [[constrained-decoding]]
 - [[llm-ppo-dpo-grpo-comparison]]
 - [[llm-pretrain-data-engineering]]
 - [[llm-rl-optimization-signal-pipeline]]
 - [[ppo-critic-td-error-gae]]
 - [[program-as-weights-fuzzy-functions]]
+
+## logits
+- [[constrained-decoding]]
 
 ## long-context
 - [[rag-retrieval-2026-lessons]]
@@ -327,6 +340,9 @@ last_updated: 2026-08-26
 
 ## spec-driven-development
 - [[openspec-sdd]]
+
+## structured-output
+- [[constrained-decoding]]
 
 ## system-design
 - [[agent-system-architecture]]

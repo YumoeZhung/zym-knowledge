@@ -1,7 +1,7 @@
 ---
 title: Agent Loop、Agent Runtime 与 Agent Harness 的边界
 created: 2026-05-20
-last_updated: 2026-08-21
+last_updated: 2026-09-01
 tags: [agent, agent-harness, agent-loop, agent-runtime, architecture, llm, open-source, system-design]
 sources: [raw/2026-05-20-agent-system-architecture-discussion.md, raw/2026-08-21-agent-loop-runtime-harness-distinction.md]
 ---
@@ -173,3 +173,4 @@ Compaction 能说明三个层级为何不能混为一谈：
 - [[harness-as-moat]] — Harness 的控制论与竞争壁垒视角
 - [[long-horizon-agent-drift-loop-control]] — 长任务中的 Loop 控制与验证
 - [[claw-swe-bench-harness-evaluation]] — 把 Harness 作为可测变量
+- [[constrained-decoding]] — Model adapter/Runtime 中的结构化输出与逐 token 约束边界
