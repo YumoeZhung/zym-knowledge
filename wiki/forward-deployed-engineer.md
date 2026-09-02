@@ -1,7 +1,7 @@
 ---
 title: Forward Deployed Engineer (FDE)
 created: 2026-05-20
-last_updated: 2026-05-20
+last_updated: 2026-09-02
 tags: [fde, agent, enterprise-ai, deployment, palantir, pmf]
 sources: [raw/2026-05-20-fde-agent-era-pmf.md]
 ---
@@ -90,3 +90,4 @@ FDE 做的大量"集成性脏活"（字段映射、API 对接、提示词调优�
 
 - [[agent-system-architecture]]
 - [[llm-pretrain-data-engineering]]
+- [[palantir-ontology]]
