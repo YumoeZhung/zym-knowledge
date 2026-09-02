@@ -1,7 +1,7 @@
 ---
 title: Master Index
 created: 2026-05-19
-last_updated: 2026-08-26
+last_updated: 2026-09-02
 ---
 
 # Master Index
@@ -27,6 +27,7 @@ Central index of all wiki pages in the knowledge base.
 - [[long-horizon-agent-drift-loop-control]] — 长任务 Agent 跑偏、绕路与死循环：Harness 控制闭环
 - [[meta-ai-pivot-2026]] — Meta 2026 AI 全面转型：裁员8000人与千亿美元豪赌
 - [[openspec-sdd]] — SDD：Spec-Driven Development 与 OpenSpec 框架
+- [[palantir-ontology]] — Palantir Ontology：从数据图谱到可执行的业务数字孪生
 - [[ppo-critic-td-error-gae]] — PPO 中的 Critic、TD 误差与 GAE
 - [[program-as-weights-fuzzy-functions]] — Program-as-Weights：把模糊函数编译成可复用权重
 - [[rag-retrieval-2026-lessons]] — 2026 RAG 调研：从 Full-doc 争论转向 Query-aware Retrieval
@@ -37,6 +38,6 @@ Central index of all wiki pages in the knowledge base.
 
 ## Statistics
 
-- Total pages: 24
-- Total raw sources: 25
-- Last ingest: 2026-08-26
+- Total pages: 25
+- Total raw sources: 26
+- Last ingest: 2026-09-02

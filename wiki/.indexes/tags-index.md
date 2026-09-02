@@ -1,7 +1,7 @@
 ---
 title: Tags Index
 created: 2026-05-19
-last_updated: 2026-08-26
+last_updated: 2026-09-02
 ---
 
 # Tags Index
@@ -21,6 +21,7 @@ last_updated: 2026-08-26
 - [[harness-as-moat]]
 - [[long-horizon-agent-drift-loop-control]]
 - [[openspec-sdd]]
+- [[palantir-ontology]]
 - [[program-as-weights-fuzzy-functions]]
 - [[real-world-agent-benchmark-taxonomy]]
 - [[route-aware-merged-retrieval-rerank]]
@@ -130,6 +131,7 @@ last_updated: 2026-08-26
 
 ## enterprise-ai
 - [[forward-deployed-engineer]]
+- [[palantir-ontology]]
 
 ## evaluation
 - [[building-self-improving-agents]]
@@ -181,6 +183,9 @@ last_updated: 2026-08-26
 ## knowledge-governance
 - [[cross-page-table-parent-child-retrieval]]
 
+## knowledge-graph
+- [[palantir-ontology]]
+
 ## layoff
 - [[meta-ai-pivot-2026]]
 
@@ -216,6 +221,9 @@ last_updated: 2026-08-26
 ## on-device
 - [[program-as-weights-fuzzy-functions]]
 
+## ontology
+- [[palantir-ontology]]
+
 ## open-source
 - [[agent-system-architecture]]
 - [[browser-harness]]
@@ -234,6 +242,7 @@ last_updated: 2026-08-26
 
 ## palantir
 - [[forward-deployed-engineer]]
+- [[palantir-ontology]]
 
 ## peft
 - [[program-as-weights-fuzzy-functions]]
@@ -315,6 +324,9 @@ last_updated: 2026-08-26
 ## self-improving
 - [[building-self-improving-agents]]
 - [[skillopt-self-evolving-agent-skills]]
+
+## semantic-layer
+- [[palantir-ontology]]
 
 ## session-runtime
 - [[agent-harness-durable-compaction-runtime-boundary]]
