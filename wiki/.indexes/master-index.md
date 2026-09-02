@@ -1,7 +1,7 @@
 ---
 title: Master Index
 created: 2026-05-19
-last_updated: 2026-08-26
+last_updated: 2026-09-02
 ---
 
 # Master Index
@@ -32,11 +32,12 @@ Central index of all wiki pages in the knowledge base.
 - [[rag-retrieval-2026-lessons]] — 2026 RAG 调研：从 Full-doc 争论转向 Query-aware Retrieval
 - [[real-world-agent-benchmark-taxonomy]] — 真实世界 Agent 测评集分类：从通用能力到长期工作闭环
 - [[route-aware-merged-retrieval-rerank]] — Route-aware Merged Retrieval Rerank
+- [[sft-data-quality-and-training-schedule]] — SFT 数据质量与训练调度：Gold 起步、Silver 扩量、精品收尾
 - [[skillopt-self-evolving-agent-skills]] — SkillOpt：把 SKILL.md 当作可训练参数
 - [[version-bound-signed-cursor]] — 版本绑定且带 HMAC 签名的 Cursor：保证 Agent 文档续读一致性
 
 ## Statistics
 
-- Total pages: 24
-- Total raw sources: 25
-- Last ingest: 2026-08-26
+- Total pages: 25
+- Total raw sources: 26
+- Last ingest: 2026-09-02

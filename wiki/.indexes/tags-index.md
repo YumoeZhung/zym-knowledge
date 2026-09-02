@@ -1,10 +1,13 @@
 ---
 title: Tags Index
 created: 2026-05-19
-last_updated: 2026-08-26
+last_updated: 2026-09-02
 ---
 
 # Tags Index
+
+## alignment
+- [[sft-data-quality-and-training-schedule]]
 
 ## advantage-estimation
 - [[llm-rl-optimization-signal-pipeline]]
@@ -98,8 +101,12 @@ last_updated: 2026-08-26
 ## cybernetics
 - [[harness-as-moat]]
 
+## curriculum-learning
+- [[sft-data-quality-and-training-schedule]]
+
 ## data-engineering
 - [[llm-pretrain-data-engineering]]
+- [[sft-data-quality-and-training-schedule]]
 
 ## deep-learning
 - [[llm-pretrain-data-engineering]]
@@ -191,6 +198,7 @@ last_updated: 2026-08-26
 - [[llm-rl-optimization-signal-pipeline]]
 - [[ppo-critic-td-error-gae]]
 - [[program-as-weights-fuzzy-functions]]
+- [[sft-data-quality-and-training-schedule]]
 
 ## long-context
 - [[rag-retrieval-2026-lessons]]
@@ -318,6 +326,9 @@ last_updated: 2026-08-26
 
 ## session-runtime
 - [[agent-harness-durable-compaction-runtime-boundary]]
+
+## sft
+- [[sft-data-quality-and-training-schedule]]
 
 ## small-model
 - [[program-as-weights-fuzzy-functions]]
