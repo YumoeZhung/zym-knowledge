@@ -1,7 +1,7 @@
 ---
 title: LLM Pretrain Data Engineering
 created: 2026-05-20
-last_updated: 2026-05-20
+last_updated: 2026-09-02
 tags: [llm, pretraining, data-engineering, scaling, deep-learning]
 sources: [raw/2026-05-20-llm-pretrain-data-engineering.md]
 ---
@@ -143,3 +143,4 @@ sources: [raw/2026-05-20-llm-pretrain-data-engineering.md]
 ## Related
 
 - [[agent-system-architecture]]
+- [[sft-data-quality-and-training-schedule]]
