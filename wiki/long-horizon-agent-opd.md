@@ -1,167 +1,210 @@
 ---
 title: 长轨迹 Agent 的 GRPO 信用分配与 On-Policy Distillation
 created: 2026-08-31
-last_updated: 2026-08-31
-tags: [agent, credit-assignment, deepseek, distillation, glm, grpo, long-horizon, on-policy-distillation, reinforcement-learning]
-sources: [raw/2026-08-31-long-horizon-agent-opd.md]
+last_updated: 2026-09-07
+tags: [agent, credit-assignment, deepseek, distillation, glm, grpo, kl-divergence, long-horizon, on-policy-distillation, reinforcement-learning]
+sources: [raw/2026-08-31-long-horizon-agent-opd.md, raw/2026-09-07-opd-full-vocabulary-clarifications.md]
 ---
 
 # 长轨迹 Agent 的 GRPO 信用分配与 On-Policy Distillation
 
 ## 一句话理解
 
-普通 GRPO 用整条轨迹的最终 reward 评价轨迹，长任务中很难判断具体哪一步应该被奖励；On-Policy Distillation（OPD）则让学生在自己的轨迹上运行，由强教师在学生实际到达的每个状态提供逐 Token 概率分布，从而获得更密集、更稳定的学习信号。
+OPD（On-Policy Distillation，在线策略蒸馏）的核心是：**学生自己做题，教师在学生实际走到的位置指导下一步，再更新学生。**
 
-## 问题：为什么长轨迹 GRPO 难训练
+它结合了“在学生自己的状态上学习”和“教师提供密集监督”。On-policy 说的是轨迹来自谁，不是某一种固定 KL 方向，也不等于必须取得全词表 logits。[来源：补充核验笔记][s2]
 
-GRPO 对同一个任务采样多条轨迹，并计算组内相对优势：
+## 面试问题：长轨迹 GRPO 为什么难
 
-```text
-A_i = (R_i - mean(R)) / std(R)
-```
+对同一任务生成一组轨迹，用最终奖励计算相对优势：
 
-在普通实现中，同一条轨迹内的生成内容通常共享由最终 reward 得到的 advantage。对几十或几百步的 Agent 任务，这会带来：
+$$
+A_i=\frac{R_i-\operatorname{mean}(R)}{\operatorname{std}(R)+\epsilon}
+$$
 
-- **全组失败，无信号**：若所有轨迹 reward 相同，组内 advantage 接近零。
-- **好步骤被误罚**：失败轨迹中正确的检索、定位和修改也会收到负向更新。
-- **坏步骤被误奖**：成功轨迹中的绕路、偶然成功和无效动作也会收到正向更新。
-- **探索概率下降**：轨迹越长，随机探索出完整成功路径的概率越低。
+仅采用终局奖励的常见实现，会将同一个轨迹级优势用于该轨迹的多个生成位置：
 
-这包含两个相关但不同的问题：
+- 全组奖励相同，组内优势为零，缺少这部分任务学习信号。
+- 失败轨迹若低于组内平均，里面的正确尝试也可能受到负向更新。
+- 成功轨迹若高于组内平均，无效绕路也可能被一并强化。
+- 长任务可能更难探索到完整成功路径，且最终结果难以归因到具体动作。
 
-- **奖励稀疏**：有用 reward 出现得太晚、太少。
-- **信用分配**：无法判断最终结果应该归因于哪些中间动作。
+注意，“失败”不必然等于负优势，仍取决于组内相对奖励；KL 等辅助项也可能继续产生梯度。奖励稀疏与信用分配是相关但不同的问题。[来源：面试讨论及本次澄清][s1][s2]
 
-GRPO 的 Reward、Advantage 与 Loss 关系见 [[llm-rl-optimization-signal-pipeline]]；它与 PPO、DPO 的区别见 [[llm-ppo-dpo-grpo-comparison]]。
+相关基础：[[llm-ppo-dpo-grpo-comparison]]、[[llm-rl-optimization-signal-pipeline]]。
 
-## 第一反应：阶段奖励
+## 你的阶段奖励思路是否正确
 
-将任务拆成多个子目标，每完成一个里程碑就给奖励，属于 reward shaping、process reward 或 milestone reward。
+把任务拆成子目标并设置阶段奖励，是合理的 reward shaping 思路；过程监督与里程碑奖励是相关做法，但不是完全同义词。
 
-它在逻辑上是有效的，但开放式 Agent 任务存在多条正确路径，人工逐步标注成本高，而且固定里程碑可能诱导模型迎合中间分数而忽略最终目标。当前更可扩展的趋势是保留最终可验证结果，同时让教师、环境、Critic 或分支 rollout 自动产生更细粒度的学习信号。
+难点是开放式任务存在多条正确路径，中间标注可能昂贵，固定里程碑也可能被投机利用。不能把面试官的反馈泛化为“过程奖励已经不用了”。有可靠自动验证器时，中间反馈仍然有价值。OPD 是利用教师提供另一类密集信号，不是证明阶段奖励无效。[来源：面试讨论；边界为整理者分析][s1][s2]
 
-## OPD 是什么
+## OPD 怎么训练
 
-### 普通离线蒸馏
+1. 准备任务 prompt；Agent 任务还需要可交互环境和工具。
+2. 当前学生生成回答或工具调用轨迹，保留错误尝试及真实工具返回。
+3. 教师读取相同的历史前缀，在每个受监督的生成位置计算候选 token 概率。
+4. 构造分布散度损失，或将教师/学生 logprob 差转成策略梯度信号。
+5. 冻结教师，只更新学生；随后刷新学生轨迹。
 
-```text
-教师生成正确轨迹 -> 学生模仿教师轨迹
-```
+这里的状态包含 prompt、此前生成内容和可见的环境反馈。教师不能偷看未来工具结果；通常只对模型生成位置计算损失，工具返回属于上下文。轨迹已知后，教师可以利用因果掩码批量评分，不代表必须每生成一个 token 就调用一次教师。[来源：补充核验笔记；mask/上下文部分为工程解释][s2]
 
-学生只见过教师访问的状态。一旦实际运行中犯错并进入新状态，可能不知道如何恢复。
+### 与普通离线蒸馏的区别
 
-### On-Policy Distillation
+离线蒸馏常让学生模仿教师生成的轨迹；OPD 让教师评价学生生成的轨迹。学生偏离标准路径后，训练仍覆盖这些实际遇到的状态。
 
-```text
-学生生成自己的轨迹
-  -> 教师读取学生当前的真实前缀状态
-  -> 教师输出完整 Token 概率分布
-  -> 学生通过 KL Loss 对齐教师
-```
+类比：看高手下棋是离线模仿；自己下棋，只看最终输赢是终局奖励 RL；自己下棋，教练按当前棋局指导，是 OPD。教师是否能可靠指导错误状态，仍需验证。[来源：补充核验笔记][s2]
 
-可以概括为：
+## Full-vocabulary logits 到底是什么意思
 
-```text
-L_OPD = sum_i w_i * KL(student || teacher_i)
-```
+### 先区分 logits 与概率
 
-关键在于训练状态来自当前学生策略。学生走弯路、工具报错或进入不理想状态时，教师仍能在这些状态上指导下一步，因此比固定教师轨迹更能覆盖学生部署时遇到的状态分布。
+模型最后一层 hidden state 经过输出头（unembedding / LM head），得到长度为词表大小的分数向量 \(z\)。这些分数叫 logits，经 softmax 才成为概率：
 
-## OPD 为什么能缓解长轨迹训练困难
+$$
+p(v\mid s)=\frac{\exp(z_v/\tau)}
+{\sum_{u\in V}\exp(z_u/\tau)}
+$$
 
-假设 Agent 在测试报错后准备选择下一步动作：
+\(V\) 为词表，\(\tau\) 为温度。Full-vocabulary 指在同一个预测位置使用所有候选 token 的分布，而不是生成词表里每个 token 的后续轨迹。[来源：对话澄清与独立数学说明][s2]
 
-| 动作 | 学生概率 | Agent 专家概率 |
+### 四个 token 的例子
+
+假设整个词表只有四个 token，温度为 1：
+
+| 候选 token | 教师概率 \(p_T\) | 学生概率 \(p_S\) |
 |---|---:|---:|
-| 查看错误日志 | 15% | 55% |
-| 检查依赖版本 | 10% | 25% |
-| 随机修改其他代码 | 30% | 1% |
+| 北京 | 0.70 | 0.30 |
+| 上海 | 0.20 | 0.40 |
+| 杭州 | 0.08 | 0.20 |
+| 深圳 | 0.02 | 0.10 |
 
-终局 GRPO 必须等整个任务结束后才能给出奖励。OPD则能在当前 Token 位置直接推动学生提高前两个动作的概率、降低第三个动作的概率。
+学生这次采到了“上海”。
 
-它的价值包括：
+**只取采样 token 的教师信号**：知道教师给上海 0.20，学生给它 0.40；教师/学生 logprob 差为 \(\log(0.20/0.40)\approx-0.693\)，可用来降低对此次选择的偏好。
 
-1. **密集监督**：沿轨迹的每个 Token 都有教师分布，而不是只在终点得到一个标量。
-2. **较低方差**：完整 logits 比单次采样动作包含更多信息。
-3. **覆盖学生状态**：教师在学生自己访问的状态上纠偏。
-4. **能力合并稳定**：不同领域专家无需直接做参数平均或混合 RL。
-5. **减少灾难性遗忘**：后训练不同阶段的能力可以通过教师重新注入。
+**使用完整分布**：还知道教师最偏好北京，对杭州和深圳更不看好，能同时利用所有候选的相对偏好。
 
-## DeepSeek V4：先专家化，再统一
+修正旧解释：单 token 损失也会通过 softmax 与共享参数改变其他 token，不是“只更新上海”。区别是有没有直接拿到其余候选的教师监督，而非其他候选是否产生梯度。表格是教学假设，不代表真实分词或实验测量。[来源：对话例子及数学澄清][s2]
 
-DeepSeek V4 的公开流程是：
+## KL 方向：别把通用示例当成 DeepSeek 的公式
 
-```text
-Base Model
-  -> 数学/代码/Agent/指令等领域专家
-  -> 每个专家进行领域 SFT + GRPO
-  -> 多教师 Full-Vocabulary OPD
-  -> 统一模型
-```
+### 正向 KL：教师加权
 
-DeepSeek V4使用十多个领域教师。学生从自己的策略采样轨迹，再针对相关领域教师计算 reverse KL。它采用 full-vocabulary logit distillation，而不是只利用学生实际采样 Token 的对数概率近似 KL，从而降低估计方差并提高蒸馏稳定性。
+$$
+D_{\mathrm{KL}}(p_T\parallel p_S)
+=\sum_{v\in V}p_T(v)\log\frac{p_T(v)}{p_S(v)}
+$$
 
-需要准确表述：
+教师固定时，其对学生的梯度等价于软标签交叉熵：
 
-> DeepSeek V4没有用 OPD 替代所有强化学习。领域专家本身仍由 SFT + GRPO 训练；OPD主要替换最终的 mixed RL 能力融合阶段。
+$$
+L_{\mathrm{CE}}=-\sum_{v\in V}p_T(v)\log p_S(v)
+$$
 
-所以 OPD缓解了统一模型的稀疏监督、领域冲突和能力合并问题，但并未彻底解决最初训练 Agent 专家时的信用分配。
+在温度 1、固定状态下，对学生 logits 的梯度为 \(p_S-p_T\)。上例为 \([-0.40,0.20,0.12,0.08]\)：梯度下降提高北京 logit、降低另外三个。这是易懂的全分布监督演示，**不是 DeepSeek V4 反向 KL 的梯度公式**。[来源：本次独立数学说明][s2]
 
-## GLM：跨阶段 OPD 防止能力遗忘
+### 反向 KL：学生加权
 
-GLM-5采用顺序后训练：
+$$
+D_{\mathrm{KL}}(p_S\parallel p_T)
+=\sum_{v\in V}p_S(v)\log\frac{p_S(v)}{p_T(v)}
+$$
 
-```text
-SFT
-  -> Reasoning RL
-  -> Agentic RL
-  -> General RL
-  -> On-Policy Cross-Stage Distillation
-```
+DeepSeek V4 此处采用这个方向。两个方向都以分布一致为最小值，但权重、梯度和优化偏好不同，不能直接互换。[来源：DeepSeek 报告核验及数学说明][s2]
 
-后一个阶段可能覆盖前一个阶段的能力。GLM因此把各阶段 checkpoint 作为教师，让最终模型在 on-policy 轨迹上恢复此前获得的能力。
+典型的固定 rollout、逐位置蒸馏更新可写成：
 
-GLM的异步 Agent RL、slime、大规模可验证环境和并行 rollout 主要解决：
+$$
+L(\theta)=\frac{1}{\sum_t m_t}
+\sum_t m_t D_{\mathrm{KL}}
+\left(p_\theta(\cdot\mid s_t)\parallel p_T(\cdot\mid s_t)\right)
+$$
 
-- 长短轨迹不均造成的同步等待；
-- Agent rollout 成本和探索规模；
-- 异步策略滞后带来的 off-policy 不稳定；
-- 沙箱故障等噪声奖励。
+\(m_t\) 为生成位置 mask。轨迹先由学生采样，更新时把已采样前缀视作固定数据；通过学生概率反传，不对离散采样或环境本身反传。这是位置级蒸馏写法，不声称包含整个状态访问分布变化的全部梯度项。[来源：verl 核验及数学说明][s2]
 
-这些基础设施能够让长轨迹 RL 实际跑起来，但不能等同于精细的 step-level credit assignment。
+## 为什么完整词表能降低方差
 
-## DeepSeek V4 与 GLM 的区别
+固定一个状态 \(s\)，若 \(a\sim p_S(\cdot\mid s)\)：
 
-| 维度 | DeepSeek V4 | GLM-5 |
+$$
+\mathbb{E}_{a\sim p_S}
+\left[\log p_S(a\mid s)-\log p_T(a\mid s)\right]
+=D_{\mathrm{KL}}(p_S\parallel p_T)
+$$
+
+只采一个 token，得到的是随机估计。不同次可能采到北京或上海，信号会不同；全词表方法直接把各候选的贡献加权求和，消除这个固定状态下的 token 抽样噪声。
+
+但 prompt、历史前缀、环境及 mini-batch 仍随机，所以不是“方差为零”或“必然收敛”。比较时还应控制目标、状态分布及计算预算。[来源：本次数学澄清；DeepSeek 报告提供其稳定性观察][s2]
+
+### 抽样 KL 值不能直接当成正确梯度
+
+抽样方法常使用：
+
+$$
+\hat A_t=\operatorname{sg}\left[
+\log p_T(a_t\mid s_t)-\log p_{\mathrm{rollout}}(a_t\mid s_t)
+\right]
+$$
+
+再作为策略梯度损失的权重；sg 表示停止梯度，必要时配合 importance ratio / clipping。它不是直接对采样后的 logprob 差做 backward：那样会漏掉离散采样分布相关的梯度项。
+
+全词表精确 KL 可直接对学生分布反传。这是两条实现路径；不能把“采样值是无偏估计”误读成“直接对该值求导就得到正确的无偏梯度”。[来源：Thinking Machines / verl 核验及数学说明][s2]
+
+## 它帮助长任务的原因与边界
+
+OPD 不必只等终局的一个标量反馈，而能在学生自己的前缀上获得密集监督，减少只模仿教师轨迹的分布偏移。
+
+但它学的是“教师在这个前缀下倾向怎么继续”，不是“这个 token 对最终成功贡献了多少”。教师也可能顺着错误前缀继续，或在异常工具状态下失效。逐 token 模仿不等于逐步骤的真实因果信用分配。[来源：面试讨论与补充核验][s1][s2]
+
+## DeepSeek V4 与 GLM-5：用途及实现不同
+
+| 维度 | DeepSeek V4 报告 | GLM-5 报告 |
 |---|---|---|
-| 训练组织 | 多个领域专家并行培养 | Reasoning、Agentic、General 顺序 RL |
-| OPD 教师 | 数学、代码、Agent等领域专家 | 不同后训练阶段的 checkpoint |
-| 主要目的 | 专家能力统一与减少领域冲突 | 恢复顺序训练中遗忘的能力 |
-| 共同点 | 学生在自己的轨迹上接受教师 logits 监督 | 学生在自己的轨迹上接受教师 logits 监督 |
+| 教师来源 | 分别培养的领域专家 | 前序 SFT/RL 阶段 checkpoint |
+| 主要用途 | 把专家能力统一到一个模型 | 恢复顺序训练中退化的能力 |
+| 此处训练信号 | 完整词表反向 KL | 采样 token 的教师/学生 logprob 比替换 advantage |
+| 是否替代所有 RL | 否，专家仍使用 SFT + GRPO | 否，仍有多个 RL 阶段 |
 
-## 三种方法不要混淆
+DeepSeek 报告使用十多个教师，按任务向相关专家学习，不表示每条样本都必须同时查询所有教师。它缓存教师最后一层 hidden states，训练时用对应 LM head 重建 logits，并按教师调度及使用专用 KL kernel 降低成本。
 
-| 方法 | 信号来源 | 解决重点 |
-|---|---|---|
-| 阶段奖励 | 人工或规则定义的中间里程碑 | 显式缩短动作与 reward 的距离 |
-| 异步 Agent RL | 大规模持续生成可验证轨迹 | rollout 吞吐量与 off-policy 稳定性 |
-| OPD | 教师在学生轨迹上的 Token 分布 | 密集监督、能力融合与减少遗忘 |
+GLM-5 的跨阶段蒸馏中 group size 可为 1，因为 advantage 来自教师差异，不再需要组内奖励标准化。这不表示普通终局奖励 GRPO 用单样本就能正常计算组内相对优势。
+
+本节仅归纳上述具体报告，不自动外推到所有后续 GLM/DeepSeek 版本；异步 rollout 的吞吐优化也不等于精细信用分配算法。[来源：既有讨论；本次对两个报告相关章节的核验][s1][s2]
+
+## SFT、终局 GRPO 与 OPD 怎么选
+
+| 方法 | 常见轨迹来源 | 学习信号 | 主要限制 |
+|---|---|---|---|
+| 离线 SFT / 序列蒸馏 | 人工或教师示范 | 目标 token 的交叉熵 | 学生错误状态覆盖不足 |
+| 终局奖励 GRPO | 学生同题多条 rollout | 组内相对 outcome reward | 奖励同质化、长轨迹信用粗糙 |
+| OPD | 学生 rollout | 教师概率差或分布散度 | 教师质量、访问能力与计算成本 |
+
+这张表描述典型设置，不意味着所有 SFT 都是离线、所有 RL 都只有稀疏奖励。OPD 的 on-policy 属性与 full-vocabulary 属性是两个不同维度。[来源：对话与补充核验][s1][s2]
+
+## 工程落地检查
+
+- 教师是否真的强于学生，尤其在学生的错误状态上？
+- 能否获取指定学生前缀的教师 logprobs，而不是只有教师自己生成回答的 logprobs？
+- 全词表对齐需要兼容的 token 空间；不同 tokenizer 不能直接按 token ID 比较。
+- 温度、chat template、特殊 token、工具协议、损失 mask 是否一致？
+- 保存整个 \(B\times L\times |V|\) 概率张量成本很高，是否需要分块、重算或截断近似？
+- 更新后是否刷新 rollout，并控制异步策略滞后？
+- 是否在独立任务集上检查成功率、成本和能力回退，而不只看 KL 降低？
+
+只有普通文本 API 时，通常无法直接复现完整词表 logits 蒸馏；可以做教师生成数据的序列蒸馏，但二者不能混称。[来源：核验笔记基础上的工程推论，不是特定服务的接口承诺][s2]
 
 ## 面试简答
 
-> 这个问题本质上是长轨迹下的稀疏奖励和信用分配。普通 GRPO根据完整轨迹的最终 reward 计算组内 advantage，因此失败轨迹中的正确步骤也可能被惩罚；如果同组轨迹全部失败，advantage 还可能接近零。
->
-> 阶段奖励属于 reward shaping，逻辑上可行，但开放式 Agent 的正确路径不唯一，人工定义和标注中间目标难以扩展。更可扩展的思路是 On-Policy Distillation。比如 DeepSeek V4先通过领域 SFT 和 GRPO分别训练数学、代码和 Agent 专家，再让统一学生模型在自己生成的轨迹上接受相关专家的 full-vocabulary logits 监督。这样学生在自己实际到达的状态上获得逐 Token、低方差的密集学习信号，同时避免 mixed RL 合并多种能力时的冲突。
->
-> GLM也使用跨阶段 OPD，在 Reasoning RL、Agentic RL 和 General RL 后用各阶段 checkpoint 作为教师，恢复顺序训练中可能遗忘的能力。严格来说，OPD并没有消灭最初训练 Agent 专家时的稀疏奖励问题，而是利用强专家的密集监督，降低最终统一模型直接依赖终局 reward 的难度。
+> 长轨迹只给最终奖励，既有奖励稀疏，也有信用分配粗糙的问题。阶段奖励是合理思路，但开放式任务的逐步标注难扩展。OPD 让学生先生成自己的轨迹，再由教师在这些真实前缀上提供逐 token 监督，兼顾状态分布匹配与密集学习信号。DeepSeek V4 先用 SFT 和 GRPO 训练领域专家，再用完整词表反向 KL 做多教师能力融合；完整求和能减少当前位置的 token 采样噪声。它没有取代专家训练中的全部 RL，也不等于彻底解决长期因果信用分配。
 
-## 边界与易错点
+## Sources
 
-- 不要说“OPD完全解决了长轨迹信用分配”。
-- 不要说“DeepSeek V4已经不使用 GRPO”。
-- 不要把 GLM 的异步 RL 说成 step-level reward 算法。
-- “On-policy”指训练状态来自当前学生策略，不是指教师生成标准答案。
-- OPD的代价是需要强教师，并承担教师前向计算和完整 logits 处理成本。
+- [面试讨论原始归档][s1]
+- [本轮 full-vocabulary 讲解、数学澄清及一手资料核验][s2]
+
+[s1]: ../raw/2026-08-31-long-horizon-agent-opd.md
+[s2]: ../raw/2026-09-07-opd-full-vocabulary-clarifications.md
 
 ## Related
 

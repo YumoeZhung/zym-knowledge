@@ -1,7 +1,7 @@
 ---
 title: Master Index
 created: 2026-05-19
-last_updated: 2026-08-31
+last_updated: 2026-09-07
 ---
 
 # Master Index
@@ -13,6 +13,7 @@ Central index of all wiki pages in the knowledge base.
 - [[agent-harness-durable-compaction-runtime-boundary]] — Agent Harness Durable Compaction Runtime Boundary
 - [[agent-system-architecture]] — Agent Loop、Agent Runtime 与 Agent Harness 的边界
 - [[anthropic-claude-code-practices]] — Anthropic 内部 Claude Code 实践：三种高效协作方式
+- [[attention-mechanism-composition]] — Attention 机制的组合维度：GQA、MLA、DSA、CSA 与 KDA
 - [[browser-harness]] — Browser Harness：592行代码的自愈式浏览器自动化
 - [[building-self-improving-agents]] — 构建自我改进的 Agent：Close the Loop
 - [[claw-swe-bench-harness-evaluation]] — Claw-SWE-Bench：把 Harness 作为可测变量的编程 Agent 基准
@@ -38,6 +39,6 @@ Central index of all wiki pages in the knowledge base.
 
 ## Statistics
 
-- Total pages: 25
-- Total raw sources: 26
-- Last ingest: 2026-08-31
+- Total pages: 26
+- Total raw sources: 28
+- Last ingest: 2026-09-07

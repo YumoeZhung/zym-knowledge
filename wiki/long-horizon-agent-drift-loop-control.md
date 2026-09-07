@@ -1,10 +1,10 @@
 ---
 title: "长任务 Agent 跑偏、绕路与死循环：Harness 控制闭环"
 created: 2026-07-28
-last_updated: 2026-08-31
+last_updated: 2026-09-07
 source: https://b23.tv/jRCBPEQ
 tags: [agent, agent-harness, evaluation, harness, observability, reliability, system-design, verification]
-sources: [raw/2026-07-28-long-horizon-agent-drift-loop-control.md]
+sources: [raw/2026-07-28-long-horizon-agent-drift-loop-control.md, raw/2026-09-07-opd-full-vocabulary-clarifications.md]
 ---
 
 # 长任务 Agent 跑偏、绕路与死循环：Harness 控制闭环

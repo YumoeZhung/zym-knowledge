@@ -1,7 +1,7 @@
 ---
 title: Tags Index
 created: 2026-05-19
-last_updated: 2026-08-31
+last_updated: 2026-09-07
 ---
 
 # Tags Index
@@ -90,11 +90,11 @@ last_updated: 2026-08-31
 ## cost-analysis
 - [[claw-swe-bench-harness-evaluation]]
 
-## critic
-- [[ppo-critic-td-error-gae]]
-
 ## credit-assignment
 - [[long-horizon-agent-opd]]
+
+## critic
+- [[ppo-critic-td-error-gae]]
 
 ## cursor
 - [[version-bound-signed-cursor]]
@@ -191,6 +191,9 @@ last_updated: 2026-08-31
 
 ## hypernetwork
 - [[program-as-weights-fuzzy-functions]]
+
+## kl-divergence
+- [[long-horizon-agent-opd]]
 
 ## knowledge-governance
 - [[cross-page-table-parent-child-retrieval]]

@@ -1,9 +1,9 @@
 ---
 title: 大模型后训练：PPO、DPO 与 GRPO 对比
 created: 2026-08-26
-last_updated: 2026-08-31
+last_updated: 2026-09-07
 tags: [dpo, grpo, llm, policy-optimization, ppo, preference-optimization, reinforcement-learning, rlvr]
-sources: [raw/2026-08-26-llm-ppo-dpo-grpo-old-policy-reference-clip.md, raw/2026-08-31-long-horizon-agent-opd.md]
+sources: [raw/2026-08-26-llm-ppo-dpo-grpo-old-policy-reference-clip.md, raw/2026-08-31-long-horizon-agent-opd.md, raw/2026-09-07-opd-full-vocabulary-clarifications.md]
 ---
 
 # 大模型后训练：PPO、DPO 与 GRPO 对比

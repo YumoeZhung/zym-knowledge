@@ -1,9 +1,9 @@
 ---
 title: 大模型强化学习优化链：从 Reward 到 Loss
 created: 2026-08-26
-last_updated: 2026-08-31
+last_updated: 2026-09-07
 tags: [advantage-estimation, dpo, grpo, llm, optimization, policy-gradient, ppo, reinforcement-learning, reward-modeling]
-sources: [raw/2026-08-26-llm-rl-optimization-signal-pipeline.md, raw/2026-08-31-long-horizon-agent-opd.md]
+sources: [raw/2026-08-26-llm-rl-optimization-signal-pipeline.md, raw/2026-08-31-long-horizon-agent-opd.md, raw/2026-09-07-opd-full-vocabulary-clarifications.md]
 ---
 
 # 大模型强化学习优化链：从 Reward 到 Loss
