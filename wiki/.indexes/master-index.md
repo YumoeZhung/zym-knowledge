@@ -14,6 +14,7 @@ Central index of all wiki pages in the knowledge base.
 - [[agent-system-architecture]] — Agent Loop、Agent Runtime 与 Agent Harness 的边界
 - [[anthropic-claude-code-practices]] — Anthropic 内部 Claude Code 实践：三种高效协作方式
 - [[attention-mechanism-composition]] — Attention 机制的组合维度：GQA、MLA、DSA、CSA 与 KDA
+- [[attention-training-lightning-indexer]] — Attention 新结构怎么训练：Lightning Indexer、CSA、HCA 与 KDA
 - [[browser-harness]] — Browser Harness：592行代码的自愈式浏览器自动化
 - [[building-self-improving-agents]] — 构建自我改进的 Agent：Close the Loop
 - [[claw-swe-bench-harness-evaluation]] — Claw-SWE-Bench：把 Harness 作为可测变量的编程 Agent 基准
@@ -38,6 +39,6 @@ Central index of all wiki pages in the knowledge base.
 
 ## Statistics
 
-- Total pages: 25
-- Total raw sources: 26
+- Total pages: 26
+- Total raw sources: 27
 - Last ingest: 2026-09-07
