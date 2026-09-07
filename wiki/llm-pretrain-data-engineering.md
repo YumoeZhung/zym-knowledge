@@ -144,3 +144,4 @@ sources: [raw/2026-05-20-llm-pretrain-data-engineering.md]
 
 - [[agent-system-architecture]]
 - [[attention-mechanism-composition]]
+- [[attention-training-lightning-indexer]]
