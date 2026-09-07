@@ -1,9 +1,9 @@
 ---
 title: PPO 中的 Critic、TD 误差与 GAE
 created: 2026-08-24
-last_updated: 2026-08-26
+last_updated: 2026-09-07
 tags: [advantage-estimation, critic, gae, llm, policy-clipping, ppo, reference-model, reinforcement-learning, td-learning]
-sources: [raw/2026-08-24-ppo-critic-td-error-gae.md, raw/2026-08-26-llm-ppo-dpo-grpo-old-policy-reference-clip.md]
+sources: [raw/2026-08-24-ppo-critic-td-error-gae.md, raw/2026-08-26-llm-ppo-dpo-grpo-old-policy-reference-clip.md, raw/2026-09-07-opd-full-vocabulary-clarifications.md]
 ---
 
 # PPO 中的 Critic、TD 误差与 GAE
@@ -265,3 +265,4 @@ Advantage：当前动作最终比基准好多少？
 - [[llm-ppo-dpo-grpo-comparison]]
 - [[llm-rl-optimization-signal-pipeline]]
 - [[llm-pretrain-data-engineering]]
+- [[long-horizon-agent-opd]] — 教师概率监督与价值基线的区别

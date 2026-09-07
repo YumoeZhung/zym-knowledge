@@ -1,7 +1,7 @@
 ---
 title: Tags Index
 created: 2026-05-19
-last_updated: 2026-08-26
+last_updated: 2026-09-07
 ---
 
 # Tags Index
@@ -20,6 +20,7 @@ last_updated: 2026-08-26
 - [[forward-deployed-engineer]]
 - [[harness-as-moat]]
 - [[long-horizon-agent-drift-loop-control]]
+- [[long-horizon-agent-opd]]
 - [[openspec-sdd]]
 - [[program-as-weights-fuzzy-functions]]
 - [[real-world-agent-benchmark-taxonomy]]
@@ -89,6 +90,9 @@ last_updated: 2026-08-26
 ## cost-analysis
 - [[claw-swe-bench-harness-evaluation]]
 
+## credit-assignment
+- [[long-horizon-agent-opd]]
+
 ## critic
 - [[ppo-critic-td-error-gae]]
 
@@ -104,6 +108,9 @@ last_updated: 2026-08-26
 ## deep-learning
 - [[llm-pretrain-data-engineering]]
 
+## deepseek
+- [[long-horizon-agent-opd]]
+
 ## deployment
 - [[forward-deployed-engineer]]
 
@@ -114,6 +121,9 @@ last_updated: 2026-08-26
 
 ## differentiability
 - [[differentiability-derivatives-gradients-backprop]]
+
+## distillation
+- [[long-horizon-agent-opd]]
 
 ## document-parsing
 - [[cross-page-table-parent-child-retrieval]]
@@ -152,12 +162,16 @@ last_updated: 2026-08-26
 ## gae
 - [[ppo-critic-td-error-gae]]
 
+## glm
+- [[long-horizon-agent-opd]]
+
 ## gradient
 - [[differentiability-derivatives-gradients-backprop]]
 
 ## grpo
 - [[llm-ppo-dpo-grpo-comparison]]
 - [[llm-rl-optimization-signal-pipeline]]
+- [[long-horizon-agent-opd]]
 
 ## happy-bee
 - [[rag-retrieval-2026-lessons]]
@@ -178,6 +192,9 @@ last_updated: 2026-08-26
 ## hypernetwork
 - [[program-as-weights-fuzzy-functions]]
 
+## kl-divergence
+- [[long-horizon-agent-opd]]
+
 ## knowledge-governance
 - [[cross-page-table-parent-child-retrieval]]
 
@@ -196,6 +213,7 @@ last_updated: 2026-08-26
 - [[rag-retrieval-2026-lessons]]
 
 ## long-horizon
+- [[long-horizon-agent-opd]]
 - [[real-world-agent-benchmark-taxonomy]]
 
 ## lora
@@ -215,6 +233,9 @@ last_updated: 2026-08-26
 
 ## on-device
 - [[program-as-weights-fuzzy-functions]]
+
+## on-policy-distillation
+- [[long-horizon-agent-opd]]
 
 ## open-source
 - [[agent-system-architecture]]
@@ -280,6 +301,7 @@ last_updated: 2026-08-26
 - [[differentiability-derivatives-gradients-backprop]]
 - [[llm-ppo-dpo-grpo-comparison]]
 - [[llm-rl-optimization-signal-pipeline]]
+- [[long-horizon-agent-opd]]
 - [[ppo-critic-td-error-gae]]
 
 ## reliability

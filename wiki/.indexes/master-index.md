@@ -26,6 +26,7 @@ Central index of all wiki pages in the knowledge base.
 - [[llm-pretrain-data-engineering]] — LLM 预训练数据工程
 - [[llm-rl-optimization-signal-pipeline]] — 大模型强化学习优化链：从 Reward 到 Loss
 - [[long-horizon-agent-drift-loop-control]] — 长任务 Agent 跑偏、绕路与死循环：Harness 控制闭环
+- [[long-horizon-agent-opd]] — 长轨迹 Agent 的 GRPO 信用分配与 On-Policy Distillation
 - [[meta-ai-pivot-2026]] — Meta 2026 AI 全面转型：裁员8000人与千亿美元豪赌
 - [[openspec-sdd]] — SDD：Spec-Driven Development 与 OpenSpec 框架
 - [[ppo-critic-td-error-gae]] — PPO 中的 Critic、TD 误差与 GAE
@@ -38,6 +39,6 @@ Central index of all wiki pages in the knowledge base.
 
 ## Statistics
 
-- Total pages: 25
-- Total raw sources: 26
+- Total pages: 26
+- Total raw sources: 28
 - Last ingest: 2026-09-07
