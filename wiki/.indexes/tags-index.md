@@ -1,7 +1,7 @@
 ---
 title: Tags Index
 created: 2026-05-19
-last_updated: 2026-09-07
+last_updated: 2026-09-30
 ---
 
 # Tags Index
@@ -49,6 +49,9 @@ last_updated: 2026-09-07
 ## ai-workflow
 - [[anthropic-claude-code-practices]]
 - [[openspec-sdd]]
+
+## analysis-by-synthesis
+- [[inverse-problems-and-candidate-verification]]
 
 ## anthropic
 - [[anthropic-claude-code-practices]]
@@ -127,6 +130,7 @@ last_updated: 2026-09-07
 
 ## document-parsing
 - [[cross-page-table-parent-child-retrieval]]
+- [[vlm-generate-verify]]
 
 ## dpo
 - [[llm-ppo-dpo-grpo-comparison]]
@@ -149,6 +153,7 @@ last_updated: 2026-09-07
 - [[real-world-agent-benchmark-taxonomy]]
 - [[route-aware-merged-retrieval-rerank]]
 - [[skillopt-self-evolving-agent-skills]]
+- [[vlm-generate-verify]]
 
 ## fde
 - [[forward-deployed-engineer]]
@@ -161,6 +166,10 @@ last_updated: 2026-09-07
 
 ## gae
 - [[ppo-critic-td-error-gae]]
+
+## generate-verify
+- [[inverse-problems-and-candidate-verification]]
+- [[vlm-generate-verify]]
 
 ## glm
 - [[long-horizon-agent-opd]]
@@ -191,6 +200,9 @@ last_updated: 2026-09-07
 
 ## hypernetwork
 - [[program-as-weights-fuzzy-functions]]
+
+## inverse-problems
+- [[inverse-problems-and-candidate-verification]]
 
 ## kl-divergence
 - [[long-horizon-agent-opd]]
@@ -362,6 +374,9 @@ last_updated: 2026-09-07
 ## task-engine
 - [[agent-harness-durable-compaction-runtime-boundary]]
 
+## task-formulation
+- [[vlm-generate-verify]]
+
 ## td-learning
 - [[ppo-critic-td-error-gae]]
 
@@ -373,4 +388,9 @@ last_updated: 2026-09-07
 
 ## verification
 - [[anthropic-claude-code-practices]]
+- [[inverse-problems-and-candidate-verification]]
 - [[long-horizon-agent-drift-loop-control]]
+- [[vlm-generate-verify]]
+
+## vlm
+- [[vlm-generate-verify]]

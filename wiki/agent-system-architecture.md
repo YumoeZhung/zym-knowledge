@@ -1,9 +1,9 @@
 ---
 title: Agent Loop、Agent Runtime 与 Agent Harness 的边界
 created: 2026-05-20
-last_updated: 2026-09-29
+last_updated: 2026-09-30
 tags: [agent, agent-harness, agent-loop, agent-runtime, architecture, llm, open-source, system-design]
-sources: [raw/2026-05-20-agent-system-architecture-discussion.md, raw/2026-08-21-agent-loop-runtime-harness-distinction.md, raw/2026-09-29-agent-control-architecture-taxonomy.md]
+sources: [raw/2026-05-20-agent-system-architecture-discussion.md, raw/2026-08-21-agent-loop-runtime-harness-distinction.md, raw/2026-09-29-agent-control-architecture-taxonomy.md, raw/2026-09-30-vlm-generate-verify-reading.md]
 ---
 
 # Agent Loop、Agent Runtime 与 Agent Harness 的边界
@@ -226,6 +226,12 @@ Compaction 能说明三个层级为何不能混为一谈：
 
 详细的持久化边界见 [[agent-harness-durable-compaction-runtime-boundary]]。
 
+## 候选生成与验证的分工
+
+[[vlm-generate-verify|VLM 候选生成与验证]] 提供了一个具体例子：程序枚举旋转角度并执行图像变换，模型检查结果是否正立，程序再按规则选择或转入备用流程。这里可以分别观察候选搜索策略与验证机制；固定四向枚举本身不要求自主 Agent 或多 Agent 编排。
+
+这是基于阅读讨论的架构关联，原文实验没有验证新的 Agent Runtime 或 Harness。[来源](../raw/2026-09-30-vlm-generate-verify-reading.md#工程提炼与知识关联)
+
 ## Sources
 
 - [OpenAI Agents](https://developers.openai.com/api/docs/guides/agents)
@@ -240,6 +246,7 @@ Compaction 能说明三个层级为何不能混为一谈：
 
 ## Related
 
+- [[vlm-generate-verify]] — 候选搜索与模型验证的具体分工
 - [[agent-harness-durable-compaction-runtime-boundary]] — durable session、compaction 与恢复边界
 - [[harness-as-moat]] — Harness 的控制论与竞争壁垒视角
 - [[long-horizon-agent-drift-loop-control]] — 长任务中的 Loop 控制与验证

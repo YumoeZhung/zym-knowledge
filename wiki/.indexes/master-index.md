@@ -1,7 +1,7 @@
 ---
 title: Master Index
 created: 2026-05-19
-last_updated: 2026-09-29
+last_updated: 2026-09-30
 ---
 
 # Master Index
@@ -22,6 +22,7 @@ Central index of all wiki pages in the knowledge base.
 - [[everything-claude-code]] — Everything Claude Code (ECC)：近20万Star的Agent Harness配置框架
 - [[forward-deployed-engineer]] — Forward Deployed Engineer (FDE)
 - [[harness-as-moat]] — Harness 壁垒之争：控制论视角
+- [[inverse-problems-and-candidate-verification]] — 逆问题与候选验证
 - [[llm-ppo-dpo-grpo-comparison]] — 大模型后训练：PPO、DPO 与 GRPO 对比
 - [[llm-pretrain-data-engineering]] — LLM 预训练数据工程
 - [[llm-rl-optimization-signal-pipeline]] — 大模型强化学习优化链：从 Reward 到 Loss
@@ -36,9 +37,10 @@ Central index of all wiki pages in the knowledge base.
 - [[route-aware-merged-retrieval-rerank]] — Route-aware Merged Retrieval Rerank
 - [[skillopt-self-evolving-agent-skills]] — SkillOpt：把 SKILL.md 当作可训练参数
 - [[version-bound-signed-cursor]] — 版本绑定且带 HMAC 签名的 Cursor：保证 Agent 文档续读一致性
+- [[vlm-generate-verify]] — VLM 候选生成与验证
 
 ## Statistics
 
-- Total pages: 26
-- Total raw sources: 28
-- Last ingest: 2026-09-07
+- Total pages: 28
+- Total raw sources: 30
+- Last ingest: 2026-09-30
