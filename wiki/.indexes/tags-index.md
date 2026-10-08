@@ -1,7 +1,7 @@
 ---
 title: Tags Index
 created: 2026-05-19
-last_updated: 2026-09-30
+last_updated: 2026-10-08
 ---
 
 # Tags Index
@@ -61,6 +61,10 @@ last_updated: 2026-09-30
 - [[agent-harness-durable-compaction-runtime-boundary]]
 - [[agent-system-architecture]]
 
+## attention
+- [[attention-mechanism-composition]]
+- [[attention-training-lightning-indexer]]
+
 ## backpropagation
 - [[differentiability-derivatives-gradients-backprop]]
 
@@ -99,6 +103,9 @@ last_updated: 2026-09-30
 ## critic
 - [[ppo-critic-td-error-gae]]
 
+## csa
+- [[attention-mechanism-composition]]
+
 ## cursor
 - [[version-bound-signed-cursor]]
 
@@ -112,6 +119,7 @@ last_updated: 2026-09-30
 - [[llm-pretrain-data-engineering]]
 
 ## deepseek
+- [[attention-training-lightning-indexer]]
 - [[long-horizon-agent-opd]]
 
 ## deployment
@@ -126,6 +134,7 @@ last_updated: 2026-09-30
 - [[differentiability-derivatives-gradients-backprop]]
 
 ## distillation
+- [[attention-training-lightning-indexer]]
 - [[long-horizon-agent-opd]]
 
 ## document-parsing
@@ -135,6 +144,9 @@ last_updated: 2026-09-30
 ## dpo
 - [[llm-ppo-dpo-grpo-comparison]]
 - [[llm-rl-optimization-signal-pipeline]]
+
+## dsa
+- [[attention-mechanism-composition]]
 
 ## durable-compaction
 - [[agent-harness-durable-compaction-runtime-boundary]]
@@ -149,6 +161,7 @@ last_updated: 2026-09-30
 - [[building-self-improving-agents]]
 - [[claw-swe-bench-harness-evaluation]]
 - [[long-horizon-agent-drift-loop-control]]
+- [[program-as-weights-fuzzy-functions]]
 - [[rag-retrieval-2026-lessons]]
 - [[real-world-agent-benchmark-taxonomy]]
 - [[route-aware-merged-retrieval-rerank]]
@@ -172,7 +185,11 @@ last_updated: 2026-09-30
 - [[vlm-generate-verify]]
 
 ## glm
+- [[attention-training-lightning-indexer]]
 - [[long-horizon-agent-opd]]
+
+## gqa
+- [[attention-mechanism-composition]]
 
 ## gradient
 - [[differentiability-derivatives-gradients-backprop]]
@@ -204,6 +221,9 @@ last_updated: 2026-09-30
 ## inverse-problems
 - [[inverse-problems-and-candidate-verification]]
 
+## kda
+- [[attention-mechanism-composition]]
+
 ## kl-divergence
 - [[long-horizon-agent-opd]]
 
@@ -215,6 +235,8 @@ last_updated: 2026-09-30
 
 ## llm
 - [[agent-system-architecture]]
+- [[attention-mechanism-composition]]
+- [[attention-training-lightning-indexer]]
 - [[llm-ppo-dpo-grpo-comparison]]
 - [[llm-pretrain-data-engineering]]
 - [[llm-rl-optimization-signal-pipeline]]
@@ -222,6 +244,7 @@ last_updated: 2026-09-30
 - [[program-as-weights-fuzzy-functions]]
 
 ## long-context
+- [[attention-training-lightning-indexer]]
 - [[rag-retrieval-2026-lessons]]
 
 ## long-horizon
@@ -236,6 +259,9 @@ last_updated: 2026-09-30
 
 ## microsoft-research
 - [[skillopt-self-evolving-agent-skills]]
+
+## mla
+- [[attention-mechanism-composition]]
 
 ## model-compilation
 - [[program-as-weights-fuzzy-functions]]
@@ -359,6 +385,9 @@ last_updated: 2026-09-30
 ## snapshot-consistency
 - [[version-bound-signed-cursor]]
 
+## sparse-attention
+- [[attention-training-lightning-indexer]]
+
 ## spec-driven-development
 - [[openspec-sdd]]
 
@@ -385,6 +414,10 @@ last_updated: 2026-09-30
 
 ## tool-use
 - [[real-world-agent-benchmark-taxonomy]]
+
+## transformer
+- [[attention-mechanism-composition]]
+- [[attention-training-lightning-indexer]]
 
 ## verification
 - [[anthropic-claude-code-practices]]
