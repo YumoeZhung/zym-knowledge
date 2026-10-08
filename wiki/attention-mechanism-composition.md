@@ -1,7 +1,7 @@
 ---
 title: Attention 机制的组合维度：GQA、MLA、DSA、CSA 与 KDA
 created: 2026-09-07
-last_updated: 2026-09-07
+last_updated: 2026-10-08
 tags: [llm, transformer, attention, gqa, mla, dsa, csa, kda]
 sources: [raw/2026-09-07-attention-composition-gqa-mla-dsa-csa-kda.md]
 ---

@@ -1,10 +1,10 @@
 ---
 title: "Program-as-Weights：把模糊函数编译成可复用权重"
 created: 2026-07-27
-last_updated: 2026-07-27
+last_updated: 2026-09-30
 source: https://arxiv.org/abs/2607.02512
 tags: [agent, edge-ai, evaluation, fuzzy-functions, hypernetwork, llm, lora, model-compilation, on-device, peft, small-model]
-sources: [raw/2026-07-27-program-as-weights-fuzzy-functions.md]
+sources: [raw/2026-07-27-program-as-weights-fuzzy-functions.md, raw/2026-09-30-vlm-generate-verify-reading.md]
 ---
 
 # Program-as-Weights：把模糊函数编译成可复用权重
@@ -197,6 +197,10 @@ tool execution
 
 论文的 ToolCall-15 案例使用 10 个 PAW functions，而 multi-turn state、date/time regex 和 `tool_calls` JSON 都由普通 Python 负责。这与 [[agent-system-architecture]] 的边界一致：让模型处理模糊语义，让 Harness 负责确定性控制、状态和安全。
 
+## 与候选生成和验证的关系
+
+[[vlm-generate-verify|VLM 候选生成与验证]] 也体现了语义判断与确定性控制的分工：程序负责生成候选并记录参数，模型检查候选是否符合目标。这个联系是工程层面的类比。PAW 编译出可复用权重，旋转候选验证则可只通过任务改写和外部枚举实现；两者不能当作同一种训练或推理技术。[讨论来源](../raw/2026-09-30-vlm-generate-verify-reading.md#工程提炼与知识关联)
+
 ## 最适合与最不适合的任务
 
 适合：
@@ -267,6 +271,7 @@ N \times \text{大模型在线调用成本}
 
 ## Related
 
+- [[vlm-generate-verify]] — 通过任务改写分离语义判断与确定性控制
 - [[agent-system-architecture]] — model、runtime、tool、state 与 verifier 的系统边界
 - [[skillopt-self-evolving-agent-skills]] — 可读文本参数的优化与 validation gate
 - [[claw-swe-bench-harness-evaluation]] — 把完整执行系统作为实验单元

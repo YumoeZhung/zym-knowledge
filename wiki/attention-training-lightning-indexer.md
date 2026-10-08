@@ -1,12 +1,16 @@
 ---
 title: Attention 新结构怎么训练：Lightning Indexer、CSA、HCA 与 KDA
 created: 2026-09-07
-last_updated: 2026-09-07
+last_updated: 2026-10-08
 tags: [llm, transformer, attention, long-context, sparse-attention, distillation, deepseek, glm]
 sources: [raw/2026-09-07-attention-training-lightning-indexer-csa-hca-kda.md]
 ---
 
 # Attention 新结构怎么训练：Lightning Indexer、CSA、HCA 与 KDA
+
+## 来源与适用边界
+
+本页整理自 2026-09-07 的对话笔记，保留其中的训练框架与教学类比；并非对各模型技术报告的独立核验。下文关于具体模型版本及训练流程的描述均来自该笔记，实际实现细节仍需以对应技术报告为准；“迭代检索”和浅层表示示例用于帮助理解，不代表逐层行为的实测结论。[^1]
 
 ## 核心结论
 

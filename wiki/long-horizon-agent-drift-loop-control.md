@@ -1,10 +1,10 @@
 ---
 title: "长任务 Agent 跑偏、绕路与死循环：Harness 控制闭环"
 created: 2026-07-28
-last_updated: 2026-07-28
+last_updated: 2026-09-07
 source: https://b23.tv/jRCBPEQ
 tags: [agent, agent-harness, evaluation, harness, observability, reliability, system-design, verification]
-sources: [raw/2026-07-28-long-horizon-agent-drift-loop-control.md]
+sources: [raw/2026-07-28-long-horizon-agent-drift-loop-control.md, raw/2026-09-07-opd-full-vocabulary-clarifications.md]
 ---
 
 # 长任务 Agent 跑偏、绕路与死循环：Harness 控制闭环
@@ -267,3 +267,4 @@ INIT
 - [[building-self-improving-agents]] — 执行、验证、修正的反馈闭环
 - [[claw-swe-bench-harness-evaluation]] — 把 Harness 和预算纳入真实评测单元
 - [[skillopt-self-evolving-agent-skills]] — 用独立 validation gate 防止单 case 自我确认
+- [[long-horizon-agent-opd]] — 长轨迹训练中的稀疏奖励、信用分配与 OPD

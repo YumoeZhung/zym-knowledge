@@ -1,9 +1,9 @@
 ---
 title: Agent Loop、Agent Runtime 与 Agent Harness 的边界
 created: 2026-05-20
-last_updated: 2026-08-21
+last_updated: 2026-09-30
 tags: [agent, agent-harness, agent-loop, agent-runtime, architecture, llm, open-source, system-design]
-sources: [raw/2026-05-20-agent-system-architecture-discussion.md, raw/2026-08-21-agent-loop-runtime-harness-distinction.md]
+sources: [raw/2026-05-20-agent-system-architecture-discussion.md, raw/2026-08-21-agent-loop-runtime-harness-distinction.md, raw/2026-09-29-agent-control-architecture-taxonomy.md, raw/2026-09-30-vlm-generate-verify-reading.md]
 ---
 
 # Agent Loop、Agent Runtime 与 Agent Harness 的边界
@@ -35,6 +35,73 @@ Agent Runtime（正在运行的执行环境或实例）
 ```
 
 术语并没有统一标准。尤其是 Harness 和 Runtime，有些项目用 Harness 指整个产品，有些项目只用它指外围测试或装配层。因此，讨论架构时必须同时声明“包含哪些能力”和“运行时由谁拥有”，不能只依赖名称。
+
+## Agent Architecture 的多维分类
+
+讨论 ReAct、Plan-and-Execute、Reflexion、Multi-Agent 时，不应把它们视为一组完全同级的“Agent Architecture 类型”。更准确的是区分几个可以组合的维度：
+
+```text
+Agent Harness
+└── Agent Runtime
+    ├── Agent Loop
+    │   ├── Reasoning / Control Pattern
+    │   │   ├── ReAct
+    │   │   ├── Plan-and-Execute
+    │   │   ├── Replanning
+    │   │   └── Tree / Search based
+    │   ├── Verification / Recovery
+    │   │   ├── Reflexion
+    │   │   ├── Self-Refine
+    │   │   ├── Critic
+    │   │   └── Verifier
+    │   └── Tool / Observation transitions
+    ├── Orchestration topology
+    │   ├── Single Agent
+    │   └── Multi-Agent
+    │       ├── Manager-Worker
+    │       ├── Agent-as-Tool
+    │       ├── Handoff
+    │       ├── Debate
+    │       └── Graph
+    └── Cross-cutting runtime capabilities
+        ├── Context / Session Management
+        ├── Memory / Persistence
+        ├── Tool Runtime
+        ├── Sandbox / Permissions
+        ├── State
+        ├── Budgets / Cancellation
+        └── Tracing / Observability
+```
+
+### 分类原则
+
+- **Agent Loop** 是循环骨架，回答“Agent 如何持续运行”。
+- **Reasoning / Control Pattern** 回答“Loop 中如何组织推理、规划与行动”。ReAct、Plan-and-Execute、Replanning、Tree/Search-based 属于这一维度。
+- **Verification / Recovery** 回答“如何检查结果、诊断失败并恢复”。Reflexion、Self-Refine、Critic、Verifier 属于这一维度。
+- **Orchestration topology** 回答“由谁负责、控制权如何流动”。Single-Agent 与 Multi-Agent，以及 Manager-Worker、Agent-as-Tool、Handoff、Debate、Graph 属于这一维度。
+- **Runtime / Harness** 是承载层，而不是“第五种控制策略”。Runtime 承载 loop、state、tools、permissions、sandbox、tracing、persistence 等；Harness 负责装配、扩展和交付 Runtime。
+
+因此不能把它们写成线性演化：
+
+```text
+ReAct → Plan-and-Execute → Reflexion → Multi-Agent
+```
+
+更准确的是：
+
+```text
+一个实际 Agent 系统
+= Runtime / Harness
++ Agent Loop
++ 某种 Reasoning / Control Pattern
++ 可选的 Verification / Recovery
++ 某种 Orchestration topology
++ Context / Memory / Tools / State / Observability 等运行时能力
+```
+
+例如，一个 Manager-Worker Multi-Agent 系统完全可以同时采用 Manager 的 Plan-and-Execute + Replanning、Worker 的 ReAct + Verifier，以及 Agent-as-Tool 编排。
+
+Reflexion 与 Multi-Agent 尤其不能视为同一级别：前者是反馈/恢复机制，后者是编排拓扑。
 
 ## Agent Loop：控制算法
 
@@ -159,8 +226,18 @@ Compaction 能说明三个层级为何不能混为一谈：
 
 详细的持久化边界见 [[agent-harness-durable-compaction-runtime-boundary]]。
 
+## 候选生成与验证的分工
+
+[[vlm-generate-verify|VLM 候选生成与验证]] 提供了一个具体例子：程序枚举旋转角度并执行图像变换，模型检查结果是否正立，程序再按规则选择或转入备用流程。这里可以分别观察候选搜索策略与验证机制；固定四向枚举本身不要求自主 Agent 或多 Agent 编排。
+
+这是基于阅读讨论的架构关联，原文实验没有验证新的 Agent Runtime 或 Harness。[来源](../raw/2026-09-30-vlm-generate-verify-reading.md#工程提炼与知识关联)
+
 ## Sources
 
+- [OpenAI Agents](https://developers.openai.com/api/docs/guides/agents)
+- [OpenAI Agents SDK — Running agents](https://developers.openai.com/api/docs/guides/agents/running-agents)
+- [OpenAI Agents SDK — Orchestration and handoffs](https://developers.openai.com/api/docs/guides/agents/orchestration)
+- [Reflexion: language agents with verbal reinforcement learning, NeurIPS 2023](https://papers.neurips.cc/paper_files/paper/2023/hash/1b44b878bb782e6954cd888628510e90-Abstract-Conference.html)
 - [OpenAI Codex CLI](https://developers.openai.com/codex/cli/)
 - [OpenAI Codex `run_turn`](https://github.com/openai/codex/blob/bd19459358f534ed1cae464ec13d56600aeb45f2/codex-rs/core/src/session/turn.rs#L139-L159)
 - [OpenAI Codex Tool Orchestrator](https://github.com/openai/codex/blob/bd19459358f534ed1cae464ec13d56600aeb45f2/codex-rs/core/src/tools/orchestrator.rs#L1-L8)
@@ -169,6 +246,7 @@ Compaction 能说明三个层级为何不能混为一谈：
 
 ## Related
 
+- [[vlm-generate-verify]] — 候选搜索与模型验证的具体分工
 - [[agent-harness-durable-compaction-runtime-boundary]] — durable session、compaction 与恢复边界
 - [[harness-as-moat]] — Harness 的控制论与竞争壁垒视角
 - [[long-horizon-agent-drift-loop-control]] — 长任务中的 Loop 控制与验证

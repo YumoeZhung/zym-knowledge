@@ -1,7 +1,7 @@
 ---
 title: Tags Index
 created: 2026-05-19
-last_updated: 2026-09-07
+last_updated: 2026-10-08
 ---
 
 # Tags Index
@@ -20,6 +20,7 @@ last_updated: 2026-09-07
 - [[forward-deployed-engineer]]
 - [[harness-as-moat]]
 - [[long-horizon-agent-drift-loop-control]]
+- [[long-horizon-agent-opd]]
 - [[openspec-sdd]]
 - [[program-as-weights-fuzzy-functions]]
 - [[real-world-agent-benchmark-taxonomy]]
@@ -48,6 +49,9 @@ last_updated: 2026-09-07
 ## ai-workflow
 - [[anthropic-claude-code-practices]]
 - [[openspec-sdd]]
+
+## analysis-by-synthesis
+- [[inverse-problems-and-candidate-verification]]
 
 ## anthropic
 - [[anthropic-claude-code-practices]]
@@ -93,6 +97,9 @@ last_updated: 2026-09-07
 ## cost-analysis
 - [[claw-swe-bench-harness-evaluation]]
 
+## credit-assignment
+- [[long-horizon-agent-opd]]
+
 ## critic
 - [[ppo-critic-td-error-gae]]
 
@@ -113,6 +120,7 @@ last_updated: 2026-09-07
 
 ## deepseek
 - [[attention-training-lightning-indexer]]
+- [[long-horizon-agent-opd]]
 
 ## deployment
 - [[forward-deployed-engineer]]
@@ -127,9 +135,11 @@ last_updated: 2026-09-07
 
 ## distillation
 - [[attention-training-lightning-indexer]]
+- [[long-horizon-agent-opd]]
 
 ## document-parsing
 - [[cross-page-table-parent-child-retrieval]]
+- [[vlm-generate-verify]]
 
 ## dpo
 - [[llm-ppo-dpo-grpo-comparison]]
@@ -151,10 +161,12 @@ last_updated: 2026-09-07
 - [[building-self-improving-agents]]
 - [[claw-swe-bench-harness-evaluation]]
 - [[long-horizon-agent-drift-loop-control]]
+- [[program-as-weights-fuzzy-functions]]
 - [[rag-retrieval-2026-lessons]]
 - [[real-world-agent-benchmark-taxonomy]]
 - [[route-aware-merged-retrieval-rerank]]
 - [[skillopt-self-evolving-agent-skills]]
+- [[vlm-generate-verify]]
 
 ## fde
 - [[forward-deployed-engineer]]
@@ -168,8 +180,13 @@ last_updated: 2026-09-07
 ## gae
 - [[ppo-critic-td-error-gae]]
 
+## generate-verify
+- [[inverse-problems-and-candidate-verification]]
+- [[vlm-generate-verify]]
+
 ## glm
 - [[attention-training-lightning-indexer]]
+- [[long-horizon-agent-opd]]
 
 ## gqa
 - [[attention-mechanism-composition]]
@@ -180,6 +197,7 @@ last_updated: 2026-09-07
 ## grpo
 - [[llm-ppo-dpo-grpo-comparison]]
 - [[llm-rl-optimization-signal-pipeline]]
+- [[long-horizon-agent-opd]]
 
 ## happy-bee
 - [[rag-retrieval-2026-lessons]]
@@ -200,8 +218,14 @@ last_updated: 2026-09-07
 ## hypernetwork
 - [[program-as-weights-fuzzy-functions]]
 
+## inverse-problems
+- [[inverse-problems-and-candidate-verification]]
+
 ## kda
 - [[attention-mechanism-composition]]
+
+## kl-divergence
+- [[long-horizon-agent-opd]]
 
 ## knowledge-governance
 - [[cross-page-table-parent-child-retrieval]]
@@ -224,6 +248,7 @@ last_updated: 2026-09-07
 - [[rag-retrieval-2026-lessons]]
 
 ## long-horizon
+- [[long-horizon-agent-opd]]
 - [[real-world-agent-benchmark-taxonomy]]
 
 ## lora
@@ -246,6 +271,9 @@ last_updated: 2026-09-07
 
 ## on-device
 - [[program-as-weights-fuzzy-functions]]
+
+## on-policy-distillation
+- [[long-horizon-agent-opd]]
 
 ## open-source
 - [[agent-system-architecture]]
@@ -311,6 +339,7 @@ last_updated: 2026-09-07
 - [[differentiability-derivatives-gradients-backprop]]
 - [[llm-ppo-dpo-grpo-comparison]]
 - [[llm-rl-optimization-signal-pipeline]]
+- [[long-horizon-agent-opd]]
 - [[ppo-critic-td-error-gae]]
 
 ## reliability
@@ -374,6 +403,9 @@ last_updated: 2026-09-07
 ## task-engine
 - [[agent-harness-durable-compaction-runtime-boundary]]
 
+## task-formulation
+- [[vlm-generate-verify]]
+
 ## td-learning
 - [[ppo-critic-td-error-gae]]
 
@@ -389,4 +421,9 @@ last_updated: 2026-09-07
 
 ## verification
 - [[anthropic-claude-code-practices]]
+- [[inverse-problems-and-candidate-verification]]
 - [[long-horizon-agent-drift-loop-control]]
+- [[vlm-generate-verify]]
+
+## vlm
+- [[vlm-generate-verify]]

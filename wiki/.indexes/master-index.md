@@ -1,7 +1,7 @@
 ---
 title: Master Index
 created: 2026-05-19
-last_updated: 2026-09-07
+last_updated: 2026-10-08
 ---
 
 # Master Index
@@ -11,7 +11,7 @@ Central index of all wiki pages in the knowledge base.
 ## Pages
 
 - [[agent-harness-durable-compaction-runtime-boundary]] — Agent Harness Durable Compaction Runtime Boundary
-- [[agent-system-architecture]] — Agent Loop、Agent Runtime 与 Agent Harness 的边界
+- [[agent-system-architecture]] — Agent Architecture 多维分类；Agent Loop、Control Pattern、Verification、Orchestration、Runtime 与 Harness 的边界
 - [[anthropic-claude-code-practices]] — Anthropic 内部 Claude Code 实践：三种高效协作方式
 - [[attention-mechanism-composition]] — Attention 机制的组合维度：GQA、MLA、DSA、CSA 与 KDA
 - [[attention-training-lightning-indexer]] — Attention 新结构怎么训练：Lightning Indexer、CSA、HCA 与 KDA
@@ -23,10 +23,12 @@ Central index of all wiki pages in the knowledge base.
 - [[everything-claude-code]] — Everything Claude Code (ECC)：近20万Star的Agent Harness配置框架
 - [[forward-deployed-engineer]] — Forward Deployed Engineer (FDE)
 - [[harness-as-moat]] — Harness 壁垒之争：控制论视角
+- [[inverse-problems-and-candidate-verification]] — 逆问题与候选验证
 - [[llm-ppo-dpo-grpo-comparison]] — 大模型后训练：PPO、DPO 与 GRPO 对比
 - [[llm-pretrain-data-engineering]] — LLM 预训练数据工程
 - [[llm-rl-optimization-signal-pipeline]] — 大模型强化学习优化链：从 Reward 到 Loss
 - [[long-horizon-agent-drift-loop-control]] — 长任务 Agent 跑偏、绕路与死循环：Harness 控制闭环
+- [[long-horizon-agent-opd]] — 长轨迹 Agent 的 GRPO 信用分配与 On-Policy Distillation
 - [[meta-ai-pivot-2026]] — Meta 2026 AI 全面转型：裁员8000人与千亿美元豪赌
 - [[openspec-sdd]] — SDD：Spec-Driven Development 与 OpenSpec 框架
 - [[ppo-critic-td-error-gae]] — PPO 中的 Critic、TD 误差与 GAE
@@ -36,9 +38,10 @@ Central index of all wiki pages in the knowledge base.
 - [[route-aware-merged-retrieval-rerank]] — Route-aware Merged Retrieval Rerank
 - [[skillopt-self-evolving-agent-skills]] — SkillOpt：把 SKILL.md 当作可训练参数
 - [[version-bound-signed-cursor]] — 版本绑定且带 HMAC 签名的 Cursor：保证 Agent 文档续读一致性
+- [[vlm-generate-verify]] — VLM 候选生成与验证
 
 ## Statistics
 
-- Total pages: 26
-- Total raw sources: 27
-- Last ingest: 2026-09-07
+- Total pages: 29
+- Total raw sources: 31
+- Last ingest: 2026-10-08
