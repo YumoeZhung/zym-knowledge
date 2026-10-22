@@ -1,7 +1,7 @@
 ---
 title: Tags Index
 created: 2026-05-19
-last_updated: 2026-09-30
+last_updated: 2026-10-22
 ---
 
 # Tags Index
@@ -24,6 +24,7 @@ last_updated: 2026-09-30
 - [[openspec-sdd]]
 - [[program-as-weights-fuzzy-functions]]
 - [[real-world-agent-benchmark-taxonomy]]
+- [[repeated-turn-instructions-context-bloat]]
 - [[route-aware-merged-retrieval-rerank]]
 - [[skillopt-self-evolving-agent-skills]]
 - [[version-bound-signed-cursor]]
@@ -32,6 +33,7 @@ last_updated: 2026-09-30
 - [[agent-harness-durable-compaction-runtime-boundary]]
 - [[agent-system-architecture]]
 - [[long-horizon-agent-drift-loop-control]]
+- [[repeated-turn-instructions-context-bloat]]
 - [[version-bound-signed-cursor]]
 
 ## agent-loop
@@ -92,6 +94,7 @@ last_updated: 2026-09-30
 
 ## cost-analysis
 - [[claw-swe-bench-harness-evaluation]]
+- [[repeated-turn-instructions-context-bloat]]
 
 ## credit-assignment
 - [[long-horizon-agent-opd]]
@@ -223,6 +226,7 @@ last_updated: 2026-09-30
 
 ## long-context
 - [[rag-retrieval-2026-lessons]]
+- [[repeated-turn-instructions-context-bloat]]
 
 ## long-horizon
 - [[long-horizon-agent-opd]]
@@ -242,6 +246,7 @@ last_updated: 2026-09-30
 
 ## observability
 - [[long-horizon-agent-drift-loop-control]]
+- [[repeated-turn-instructions-context-bloat]]
 
 ## on-device
 - [[program-as-weights-fuzzy-functions]]
@@ -318,6 +323,7 @@ last_updated: 2026-09-30
 
 ## reliability
 - [[long-horizon-agent-drift-loop-control]]
+- [[repeated-turn-instructions-context-bloat]]
 - [[version-bound-signed-cursor]]
 
 ## rerank

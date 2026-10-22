@@ -1,7 +1,7 @@
 ---
 title: Agent Harness Durable Compaction Runtime Boundary
 created: 2026-06-17
-last_updated: 2026-06-17
+last_updated: 2026-10-22
 tags: [agent-harness, durable-compaction, session-runtime, architecture, task-engine]
 sources: [raw/2026-06-17-agent-harness-durable-compaction-runtime-boundary.md]
 ---
@@ -59,4 +59,4 @@ adapter 不应该各自实现 compaction boundary 计算、恢复裁剪、messag
 
 ## Related
 
-No related wiki pages yet.
+- [[repeated-turn-instructions-context-bloat]] — 每轮固定规则进入追加式历史后膨胀的实际案例

@@ -1,7 +1,7 @@
 ---
 title: "长任务 Agent 跑偏、绕路与死循环：Harness 控制闭环"
 created: 2026-07-28
-last_updated: 2026-09-07
+last_updated: 2026-10-22
 source: https://b23.tv/jRCBPEQ
 tags: [agent, agent-harness, evaluation, harness, observability, reliability, system-design, verification]
 sources: [raw/2026-07-28-long-horizon-agent-drift-loop-control.md, raw/2026-09-07-opd-full-vocabulary-clarifications.md]
@@ -261,6 +261,7 @@ INIT
 
 ## Related
 
+- [[repeated-turn-instructions-context-bloat]] — 每轮规则累积导致输入膨胀的实测证据与预算治理
 - [[agent-system-architecture]] — Agent Loop、Runtime、Harness、SDK 和 Adapter 的职责边界
 - [[agent-harness-durable-compaction-runtime-boundary]] — 长任务上下文压缩、持久化和恢复
 - [[harness-as-moat]] — 约束、记忆、验证和纠错的控制论视角

@@ -44,6 +44,12 @@ Add to your MCP client config:
 
 ## Usage
 
+### Codex 用户级技能
+
+`skills/zym-knowledge/SKILL.md` 提供个人知识库的查询、入库与维护流程，可通过 Codex 的 skill-installer 从本仓库路径 `skills/zym-knowledge` 安装到用户级 skills 目录。安装后可用 `$zym-knowledge` 调用，也可直接提出“把这个教训加入个人知识库”。
+
+技能默认定位 `$HOME/Documents/Projects/zym-knowledge`，也接受用户指定的 checkout 或 `ZYM_KNOWLEDGE_DIR`。它通过本地文件和 Git 工作，不要求额外注册 MCP。
+
 The AI knowledge manager (configured via CLAUDE.md) handles three operations:
 
 1. **Ingest** — Feed raw sources → LLM creates/updates wiki pages
