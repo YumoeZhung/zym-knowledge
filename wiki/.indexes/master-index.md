@@ -19,6 +19,7 @@ Central index of all wiki pages in the knowledge base.
 - [[claw-swe-bench-harness-evaluation]] — Claw-SWE-Bench：把 Harness 作为可测变量的编程 Agent 基准
 - [[cross-page-table-parent-child-retrieval]] — 跨页表的 Parent-Child 检索：权威结构不拆，检索投影按行窗口治理
 - [[differentiability-derivatives-gradients-backprop]] — 可导、偏导、方向导数与可微：梯度何时能描述局部变化
+- [[dsh-persona-suffix]] — DSH personaSuffix：主 Skill 的代码加载与系统提示词注入
 - [[everything-claude-code]] — Everything Claude Code (ECC)：近20万Star的Agent Harness配置框架
 - [[forward-deployed-engineer]] — Forward Deployed Engineer (FDE)
 - [[harness-as-moat]] — Harness 壁垒之争：控制论视角
@@ -43,6 +44,6 @@ Central index of all wiki pages in the knowledge base.
 
 ## Statistics
 
-- Total pages: 30
-- Total raw sources: 32
+- Total pages: 31
+- Total raw sources: 33
 - Last ingest: 2026-11-05

@@ -246,6 +246,8 @@ Compaction 能说明三个层级为何不能混为一谈：
 
 ## Related
 
+- [[dsh-persona-suffix]] — 主 Skill 的代码读取、系统提示词注入与缓存边界
+
 - [[model-adapter]] — 模型 API 协议转换，以及动态提示词更新与历史保留的区别
 
 - [[vlm-generate-verify]] — 候选搜索与模型验证的具体分工

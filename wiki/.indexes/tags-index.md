@@ -33,6 +33,7 @@ last_updated: 2026-11-05
 ## agent-harness
 - [[agent-harness-durable-compaction-runtime-boundary]]
 - [[agent-system-architecture]]
+- [[dsh-persona-suffix]]
 - [[long-horizon-agent-drift-loop-control]]
 - [[repeated-turn-instructions-context-bloat]]
 - [[version-bound-signed-cursor]]
@@ -44,6 +45,7 @@ last_updated: 2026-11-05
 - [[agent-system-architecture]]
 
 ## agent-skill
+- [[dsh-persona-suffix]]
 - [[skillopt-self-evolving-agent-skills]]
 
 ## ai-strategy
@@ -117,6 +119,7 @@ last_updated: 2026-11-05
 - [[llm-pretrain-data-engineering]]
 
 ## deepseek
+- [[dsh-persona-suffix]]
 - [[long-horizon-agent-opd]]
 
 ## deployment
@@ -306,6 +309,7 @@ last_updated: 2026-11-05
 - [[llm-pretrain-data-engineering]]
 
 ## prompt-engineering
+- [[dsh-persona-suffix]]
 - [[model-adapter]]
 
 ## prompt-optimization

@@ -60,5 +60,7 @@ Agent Loop / 上下文组装
 
 ## Related
 
+- [[dsh-persona-suffix]] — 主 Skill 的代码读取、系统提示词注入与缓存边界
+
 - [[agent-system-architecture]] — 模型适配器在 Loop、Runtime 与 Harness 中的位置
 - [[repeated-turn-instructions-context-bloat]] — 有效请求上下文与持久对话历史的区别
