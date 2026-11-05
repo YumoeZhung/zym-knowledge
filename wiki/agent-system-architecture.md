@@ -1,7 +1,7 @@
 ---
 title: Agent Loop、Agent Runtime 与 Agent Harness 的边界
 created: 2026-05-20
-last_updated: 2026-09-30
+last_updated: 2026-11-05
 tags: [agent, agent-harness, agent-loop, agent-runtime, architecture, llm, open-source, system-design]
 sources: [raw/2026-05-20-agent-system-architecture-discussion.md, raw/2026-08-21-agent-loop-runtime-harness-distinction.md, raw/2026-09-29-agent-control-architecture-taxonomy.md, raw/2026-09-30-vlm-generate-verify-reading.md]
 ---
@@ -245,6 +245,8 @@ Compaction 能说明三个层级为何不能混为一谈：
 - [DeepSeek `dsh-agent-loop`](https://github.com/deepseek-ai/deepseek-harness/blob/141eb6fef83422698aef7a981029e843e8161534/packages/core/agent-loop/README.md#L1-L15)
 
 ## Related
+
+- [[model-adapter]] — 模型 API 协议转换，以及动态提示词更新与历史保留的区别
 
 - [[vlm-generate-verify]] — 候选搜索与模型验证的具体分工
 - [[agent-harness-durable-compaction-runtime-boundary]] — durable session、compaction 与恢复边界

@@ -1,7 +1,7 @@
 ---
 title: Master Index
 created: 2026-05-19
-last_updated: 2026-10-22
+last_updated: 2026-11-05
 ---
 
 # Master Index
@@ -29,6 +29,7 @@ Central index of all wiki pages in the knowledge base.
 - [[long-horizon-agent-drift-loop-control]] — 长任务 Agent 跑偏、绕路与死循环：Harness 控制闭环
 - [[long-horizon-agent-opd]] — 长轨迹 Agent 的 GRPO 信用分配与 On-Policy Distillation
 - [[meta-ai-pivot-2026]] — Meta 2026 AI 全面转型：裁员8000人与千亿美元豪赌
+- [[model-adapter]] — 模型适配器：Agent 与模型 API 的协议边界
 - [[openspec-sdd]] — SDD：Spec-Driven Development 与 OpenSpec 框架
 - [[ppo-critic-td-error-gae]] — PPO 中的 Critic、TD 误差与 GAE
 - [[program-as-weights-fuzzy-functions]] — Program-as-Weights：把模糊函数编译成可复用权重
@@ -42,6 +43,6 @@ Central index of all wiki pages in the knowledge base.
 
 ## Statistics
 
-- Total pages: 29
-- Total raw sources: 31
-- Last ingest: 2026-10-22
+- Total pages: 30
+- Total raw sources: 32
+- Last ingest: 2026-11-05

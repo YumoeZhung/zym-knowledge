@@ -1,7 +1,7 @@
 ---
 title: 每轮重复注入规则导致上下文膨胀
 created: 2026-10-22
-last_updated: 2026-10-22
+last_updated: 2026-11-05
 tags: [agent, agent-harness, long-context, observability, cost-analysis, reliability]
 sources: [raw/2026-10-22-repeated-turn-instructions-context-bloat.md]
 ---
@@ -58,6 +58,8 @@ sources: [raw/2026-10-22-repeated-turn-instructions-context-bloat.md]
 [证据边界](../raw/2026-10-22-repeated-turn-instructions-context-bloat.md#交互卡片边界与未决事项)
 
 ## Related
+
+- [[model-adapter]] — 模型 API 协议转换，以及动态提示词更新与历史保留的区别
 
 - [[agent-harness-durable-compaction-runtime-boundary]] — 压缩、恢复与历史生命周期归 runtime 统一负责
 - [[long-horizon-agent-drift-loop-control]] — 用预算、状态和可观测信号治理长任务

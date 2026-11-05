@@ -1,7 +1,7 @@
 ---
 title: Tags Index
 created: 2026-05-19
-last_updated: 2026-10-22
+last_updated: 2026-11-05
 ---
 
 # Tags Index
@@ -21,6 +21,7 @@ last_updated: 2026-10-22
 - [[harness-as-moat]]
 - [[long-horizon-agent-drift-loop-control]]
 - [[long-horizon-agent-opd]]
+- [[model-adapter]]
 - [[openspec-sdd]]
 - [[program-as-weights-fuzzy-functions]]
 - [[real-world-agent-benchmark-taxonomy]]
@@ -62,6 +63,7 @@ last_updated: 2026-10-22
 ## architecture
 - [[agent-harness-durable-compaction-runtime-boundary]]
 - [[agent-system-architecture]]
+- [[model-adapter]]
 
 ## backpropagation
 - [[differentiability-derivatives-gradients-backprop]]
@@ -221,6 +223,7 @@ last_updated: 2026-10-22
 - [[llm-ppo-dpo-grpo-comparison]]
 - [[llm-pretrain-data-engineering]]
 - [[llm-rl-optimization-signal-pipeline]]
+- [[model-adapter]]
 - [[ppo-critic-td-error-gae]]
 - [[program-as-weights-fuzzy-functions]]
 
@@ -240,6 +243,9 @@ last_updated: 2026-10-22
 
 ## microsoft-research
 - [[skillopt-self-evolving-agent-skills]]
+
+## model-adapter
+- [[model-adapter]]
 
 ## model-compilation
 - [[program-as-weights-fuzzy-functions]]
@@ -298,6 +304,9 @@ last_updated: 2026-10-22
 
 ## pretraining
 - [[llm-pretrain-data-engineering]]
+
+## prompt-engineering
+- [[model-adapter]]
 
 ## prompt-optimization
 - [[skillopt-self-evolving-agent-skills]]
